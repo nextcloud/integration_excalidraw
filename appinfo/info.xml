@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<info>
+    <id>integration_excalidraw</id>
+    <name>Excalidraw integration</name>
+    <summary>Collaborative whiteboard integration</summary>
+    <description><![CDATA[Modern collaborative whiteboard in Nextcloud.]]></description>
+    <version>0.0.1</version>
+    <licence>agpl</licence>
+    <author>Julien Veyssier</author>
+    <namespace>Excalidraw</namespace>
+    <category>integration</category>
+    <website>https://github.com/eneiluj/integration_excalidraw</website>
+    <bugs>https://github.com/eneiluj/integration_excalidraw/issues</bugs>
+    <screenshot>https://raw.githubusercontent.com/eneiluj/integration_excalidraw/master/img/screenshot1.jpg</screenshot>
+    <dependencies>
+        <nextcloud min-version="22" max-version="25"/>
+    </dependencies>
+    <settings>
+        <admin>OCA\Excalidraw\Settings\Admin</admin>
+        <admin-section>OCA\Excalidraw\Settings\AdminSection</admin-section>
+    </settings>
+</info>
