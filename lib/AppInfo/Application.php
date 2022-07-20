@@ -28,6 +28,7 @@ use OCP\AppFramework\Http\ContentSecurityPolicy;
 class Application extends App implements IBootstrap {
 
 	public const APP_ID = 'integration_excalidraw';
+	public const DEFAULT_BASE_URL = 'https://excalidraw.com';
 
 	/**
 	 * Constructor
