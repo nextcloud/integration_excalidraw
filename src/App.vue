@@ -121,7 +121,7 @@ export default {
 		},
 		selectedBoard() {
 			return this.selectedBoardId
-				? this.boardsById[this.selectedBoardId]
+				? this.activeBoardsById[this.selectedBoardId]
 				: null
 		},
 	},
@@ -153,6 +153,7 @@ export default {
 				showSuccess(t('integration_excalidraw', 'New session was created in Excalidraw'))
 				board.id = response.data?.id
 				board.key = response.data?.key
+				board.trash = false
 				this.state.board_list.push(board)
 				this.selectedBoardId = board.id
 				this.creationModalOpen = false

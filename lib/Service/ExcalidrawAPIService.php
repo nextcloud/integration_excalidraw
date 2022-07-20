@@ -72,21 +72,23 @@ class ExcalidrawAPIService {
 	}
 
 	public function newBoard(string $userId, string $name): array {
-		[$boardId, $boardKey] = $this->generateBoard();
-		// TODO insert in DB
+		$boardInfo = $this->generateBoard();
+		$this->boardMapper->createBoard($userId, $boardInfo['boardId'], $boardInfo['boardKey'], $name);
 		return [
-			'id' => $boardId,
-			'key' => $boardKey,
+			'id' => $boardInfo['boardId'],
+			'key' => $boardInfo['boardKey'],
 		];
 	}
 
 	public function deleteBoard(string $userId, string $boardId): array {
-		// TODO delete in DB from userid and boardid
+		$this->boardMapper->deleteFromRemoteId($userId, $boardId);
 		return [];
 	}
 
 	public function editBoard(string $userId, string $boardId, string $name): array {
-		// TODO edit in DB from userid and boardid
+		$board = $this->boardMapper->findBoardByRemoteId($userId, $boardId);
+		$board->setName($name);
+		$this->boardMapper->update($board);
 		return [];
 	}
 
@@ -97,6 +99,7 @@ class ExcalidrawAPIService {
 				'id' => $dbBoard->getBoardId(),
 				'key' => $dbBoard->getBoardKey(),
 				'name' => $dbBoard->getName(),
+				'trash' => false,
 			];
 		}, $dbBoards);
 	}
