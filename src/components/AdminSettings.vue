@@ -10,15 +10,9 @@
 			</template>
 			{{ t('integration_excalidraw', 'Open modal') }}
 		</Button>
-		<Modal v-if="modalOpen"
-			size="full"
-			@close="modalOpen = false">
-			<iframe
-				class="frame"
-				frameborder="0"
-				:allowFullScreen="true"
-				src="https://excalidraw.com/#room=976bb714733bb0b0ca3d,jkVi7KC6Bj5cxkpX2MI1LA" />
-		</Modal>
+		<ExcalidrawModal v-if="modalOpen"
+			:board-url="boardUrl"
+			@close="modalOpen = false" />
 	</div>
 </template>
 
@@ -27,18 +21,18 @@ import { loadState } from '@nextcloud/initial-state'
 import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
-import Modal from '@nextcloud/vue/dist/Components/Modal'
 import Button from '@nextcloud/vue/dist/Components/Button'
 
 import { delay } from '../utils'
 import ExcalidrawIcon from './icons/ExcalidrawIcon'
+import ExcalidrawModal from './ExcalidrawModal'
 
 export default {
 	name: 'AdminSettings',
 
 	components: {
+		ExcalidrawModal,
 		ExcalidrawIcon,
-		Modal,
 		Button,
 	},
 
@@ -48,6 +42,7 @@ export default {
 		return {
 			state: loadState('integration_excalidraw', 'admin-config'),
 			modalOpen: false,
+			boardUrl: 'https://excalidraw.com/#room=976bb714733bb0b0ca3d,jkVi7KC6Bj5cxkpX2MI1LA',
 		}
 	},
 

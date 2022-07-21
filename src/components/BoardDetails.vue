@@ -25,18 +25,39 @@
 						</a>
 					</div>
 				</div>
-				<div v-if="talkEnabled"
-					class="talk-button-wrapper">
-					<Button @click="showTalkModal = true">
-						<template #icon>
-							<TalkIcon :size="20" />
-						</template>
-						{{ t('integration_excalidraw', 'Share link to a Talk conversation') }}
-					</Button>
-					<SendModal v-if="showTalkModal"
-						:board="board"
-						:excalidraw-url="excalidrawUrl"
-						@close="showTalkModal = false" />
+				<div class="buttons">
+					<div class="modal-button-wrapper">
+						<Button @click="showExcalidrawModal = true">
+							<template #icon>
+								<DockWindowIcon :size="20" />
+							</template>
+							{{ t('integration_excalidraw', 'Open here') }}
+						</Button>
+						<ExcalidrawModal v-if="showExcalidrawModal"
+							:board-url="publicLink"
+							@close="showExcalidrawModal = false" />
+					</div>
+					<a :href="publicLink" target="_blank">
+						<Button>
+							<template #icon>
+								<OpenInNewIcon :size="20" />
+							</template>
+							{{ t('integration_excalidraw', 'Open in a new tab') }}
+						</Button>
+					</a>
+					<div v-if="talkEnabled"
+						class="talk-button-wrapper">
+						<Button @click="showTalkModal = true">
+							<template #icon>
+								<TalkIcon :size="20" />
+							</template>
+							{{ t('integration_excalidraw', 'Share link to a Talk conversation') }}
+						</Button>
+						<SendModal v-if="showTalkModal"
+							:board="board"
+							:excalidraw-url="excalidrawUrl"
+							@close="showTalkModal = false" />
+					</div>
 				</div>
 			</div>
 			<div class="fields">
@@ -148,6 +169,8 @@ import CheckboxBlankOutlineIcon from 'vue-material-design-icons/CheckboxBlankOut
 import CheckIcon from 'vue-material-design-icons/Check'
 import EyeOutlineIcon from 'vue-material-design-icons/EyeOutline'
 import EyeOffOutlineIcon from 'vue-material-design-icons/EyeOffOutline'
+import DockWindowIcon from 'vue-material-design-icons/DockWindow'
+import OpenInNewIcon from 'vue-material-design-icons/OpenInNew'
 
 import TalkIcon from './talk/TalkIcon'
 import ClippyIcon from './icons/ClippyIcon'
@@ -155,11 +178,13 @@ import ClippyIcon from './icons/ClippyIcon'
 import Button from '@nextcloud/vue/dist/Components/Button'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import SendModal from './talk/SendModal'
+import ExcalidrawModal from './ExcalidrawModal'
 
 export default {
 	name: 'BoardDetails',
 
 	components: {
+		ExcalidrawModal,
 		ClippyIcon,
 		SendModal,
 		TalkIcon,
@@ -172,6 +197,8 @@ export default {
 		CheckIcon,
 		EyeOutlineIcon,
 		EyeOffOutlineIcon,
+		DockWindowIcon,
+		OpenInNewIcon,
 		Button,
 	},
 
@@ -193,9 +220,9 @@ export default {
 	data() {
 		return {
 			fields,
-			adminLinkCopied: false,
 			publicLinkCopied: false,
 			showTalkModal: false,
+			showExcalidrawModal: false,
 		}
 	},
 
@@ -358,9 +385,17 @@ export default {
 				color: var(--color-success);
 			}
 		}
-		.talk-button-wrapper {
+		.buttons {
 			display: flex;
+			align-items: center;
 			justify-content: center;
+			> * {
+				margin: 0 8px;
+			}
+			.talk-button-wrapper {
+				display: flex;
+				justify-content: center;
+			}
 		}
 	}
 }

@@ -37,7 +37,7 @@ export const fields = {
 		label: t('integration_excalidraw', 'Session name'),
 		type: 'text',
 		placeholder: t('integration_excalidraw', 'Session name'),
-		default: 'Unnamed',
+		default: 'New session',
 		mandatory: true,
 	},
 }
