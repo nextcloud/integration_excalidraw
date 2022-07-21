@@ -25,9 +25,11 @@
 				<span v-else class="fieldLabelWithIcon" />
 				<input v-if="field.type === 'text'"
 					:id="'board-' + fieldId"
+					:ref="'board-' + fieldId"
 					v-model="newBoard[fieldId]"
 					type="text"
-					:placeholder="field.placeholder">
+					:placeholder="field.placeholder"
+					@keyup.enter="onOkClick">
 				<div v-else-if="field.type === 'password' && (!field.togglable || field.enabled)"
 					class="password-input-wrapper">
 					<input
@@ -216,6 +218,10 @@ export default {
 			type: Boolean,
 			default: false,
 		},
+		focusOnField: {
+			type: String,
+			default: null,
+		},
 	},
 
 	data() {
@@ -243,6 +249,15 @@ export default {
 	},
 
 	mounted() {
+		if (this.focusOnField) {
+			const fields = this.$refs['board-' + this.focusOnField]
+			if (fields && fields.length > 0) {
+				this.$nextTick(() => {
+					fields[0].focus()
+					fields[0].select()
+				})
+			}
+		}
 	},
 
 	methods: {

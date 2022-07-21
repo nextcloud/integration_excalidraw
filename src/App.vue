@@ -49,6 +49,7 @@
 			@close="closeCreationModal">
 			<CreationForm
 				:loading="creating"
+				focus-on-field="name"
 				@ok-clicked="onCreationValidate"
 				@cancel-clicked="closeCreationModal" />
 		</Modal>
