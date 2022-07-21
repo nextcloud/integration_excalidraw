@@ -9,6 +9,7 @@
 
 namespace OCA\Excalidraw\AppInfo;
 
+use OCA\Excalidraw\Listener\AddContentSecurityPolicyListener;
 use OCA\Excalidraw\Listener\LoadFileScriptListener;
 use OCA\Excalidraw\Listener\LoadViewerListener;
 use OCA\Viewer\Event\LoadViewer;
@@ -18,7 +19,7 @@ use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 
 use OCA\Files\Event\LoadAdditionalScriptsEvent;
-use OCP\AppFramework\Http\ContentSecurityPolicy;
+use OCP\Security\CSP\AddContentSecurityPolicyEvent;
 
 /**
  * Class Application
@@ -37,29 +38,15 @@ class Application extends App implements IBootstrap {
 	 */
 	public function __construct(array $urlParams = []) {
 		parent::__construct(self::APP_ID, $urlParams);
-		$this->updateCSP(self::DEFAULT_BASE_URL);
 	}
 
 	public function register(IRegistrationContext $context): void {
 //		$context->registerEventListener(LoadAdditionalScriptsEvent::class, LoadFileScriptListener::class);
 //		$context->registerEventListener(LoadViewer::class, LoadViewerListener::class);
+		$context->registerEventListener(AddContentSecurityPolicyEvent::class, AddContentSecurityPolicyListener::class);
 	}
 
 	public function boot(IBootContext $context): void {
-	}
-
-	public function updateCSP(string $url = '') {
-		$container = $this->getContainer();
-
-		$cspManager = $container->getServer()->getContentSecurityPolicyManager();
-		$policy = new ContentSecurityPolicy();
-		$policy->addAllowedFrameDomain('\'self\'');
-		$policy->addAllowedFrameAncestorDomain('\'self\'');
-		if ($url) {
-			$policy->addAllowedFrameDomain($url);
-		}
-
-		$cspManager->addDefaultPolicy($policy);
 	}
 }
 
