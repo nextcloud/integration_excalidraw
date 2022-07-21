@@ -37,7 +37,7 @@ class Application extends App implements IBootstrap {
 	 */
 	public function __construct(array $urlParams = []) {
 		parent::__construct(self::APP_ID, $urlParams);
-		$this->updateCSP('https://excalidraw.com');
+		$this->updateCSP(self::DEFAULT_BASE_URL);
 	}
 
 	public function register(IRegistrationContext $context): void {

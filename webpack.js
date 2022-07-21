@@ -15,6 +15,7 @@ webpackConfig.stats = {
 const appId = 'integration_excalidraw'
 webpackConfig.entry = {
 	main: { import: path.join(__dirname, 'src', 'main.js'), filename: appId + '-main.js' },
+	standalone: { import: path.join(__dirname, 'src', 'standalone.js'), filename: appId + '-standalone.js' },
     adminSettings: { import: path.join(__dirname, 'src', 'adminSettings.js'), filename: appId + '-adminSettings.js' },
 }
 
