@@ -1,7 +1,7 @@
 <template>
 	<div id="excalidraw_prefs" class="section">
 		<h2>
-			<ExcalidrawIcon />
+			<ExcalidrawIcon class="icon" />
 			{{ t('integration_excalidraw', 'Excalidraw whiteboard integration') }}
 		</h2>
 		<Button @click="modalOpen = true">
@@ -92,6 +92,9 @@ export default {
 	h2 {
 		display: flex;
 		align-items: center;
+		.icon {
+			margin-right: 12px;
+		}
 	}
 }
 
