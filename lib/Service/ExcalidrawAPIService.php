@@ -15,6 +15,7 @@ use OCA\Excalidraw\AppInfo\Application;
 use OCA\Excalidraw\Db\Board;
 use OCA\Excalidraw\Db\BoardMapper;
 use OCP\IConfig;
+use OCP\Security\ISecureRandom;
 use Psr\Log\LoggerInterface;
 use OCP\Http\Client\IClientService;
 
@@ -39,6 +40,10 @@ class ExcalidrawAPIService {
 	 * @var BoardMapper
 	 */
 	private $boardMapper;
+	/**
+	 * @var ISecureRandom
+	 */
+	private $random;
 
 	/**
 	 * Service to make requests to Excalidraw API
@@ -47,30 +52,31 @@ class ExcalidrawAPIService {
 								LoggerInterface $logger,
 								IConfig $config,
 								BoardMapper $boardMapper,
+								ISecureRandom $random,
 								IClientService $clientService) {
 		$this->client = $clientService->newClient();
 		$this->logger = $logger;
 		$this->config = $config;
-		$this->appName = $appName;
 		$this->boardMapper = $boardMapper;
+		$this->random = $random;
 	}
 
-	private function randomString(string $characters, int $length): string {
-		$charactersLength = strlen($characters);
-		$randomString = '';
-		for ($i = 0; $i < $length; $i++) {
-			$randomString .= $characters[rand(0, $charactersLength - 1)];
-		}
-		return $randomString;
-	}
-
+	/**
+	 * @return array
+	 */
 	public function generateBoard(): array {
 		return [
-			'boardId' => $this->randomString(self::BOARD_ID_CHARACTERS, self::BOARD_ID_LENGTH),
-			'boardKey' => $this->randomString(self::BOARD_KEY_CHARACTERS, self::BOARD_KEY_LENGTH),
+			'boardId' => $this->random->generate(self::BOARD_ID_LENGTH, ISecureRandom::CHAR_LOWER . ISecureRandom::CHAR_DIGITS),
+			'boardKey' => $this->random->generate(self::BOARD_KEY_LENGTH, '_-' . ISecureRandom::CHAR_UPPER . ISecureRandom::CHAR_LOWER . ISecureRandom::CHAR_DIGITS),
 		];
 	}
 
+	/**
+	 * @param string $userId
+	 * @param string $name
+	 * @return array
+	 * @throws \OCP\DB\Exception
+	 */
 	public function newBoard(string $userId, string $name): array {
 		$boardInfo = $this->generateBoard();
 		$this->boardMapper->createBoard($userId, $boardInfo['boardId'], $boardInfo['boardKey'], $name);
@@ -80,11 +86,26 @@ class ExcalidrawAPIService {
 		];
 	}
 
+	/**
+	 * @param string $userId
+	 * @param string $boardId
+	 * @return array
+	 * @throws \OCP\DB\Exception
+	 */
 	public function deleteBoard(string $userId, string $boardId): array {
 		$this->boardMapper->deleteFromRemoteId($userId, $boardId);
 		return [];
 	}
 
+	/**
+	 * @param string $userId
+	 * @param string $boardId
+	 * @param string $name
+	 * @return array
+	 * @throws \OCP\AppFramework\Db\DoesNotExistException
+	 * @throws \OCP\AppFramework\Db\MultipleObjectsReturnedException
+	 * @throws \OCP\DB\Exception
+	 */
 	public function editBoard(string $userId, string $boardId, string $name): array {
 		$board = $this->boardMapper->findBoardByRemoteId($userId, $boardId);
 		$board->setName($name);
@@ -92,6 +113,10 @@ class ExcalidrawAPIService {
 		return [];
 	}
 
+	/**
+	 * @param string $userId
+	 * @return array
+	 */
 	public function getBoards(string $userId): array {
 		$dbBoards = $this->boardMapper->getBoards($userId);
 		return array_map(static function(Board $dbBoard): array {
@@ -104,6 +129,10 @@ class ExcalidrawAPIService {
 		}, $dbBoards);
 	}
 
+	/**
+	 * @param string $userId
+	 * @return string
+	 */
 	public function getBaseUrl(string $userId): string {
 		$adminBaseUrl = $this->config->getAppValue(Application::APP_ID, 'base_url', Application::DEFAULT_BASE_URL) ?: Application::DEFAULT_BASE_URL;
 		return $this->config->getUserValue($userId, Application::APP_ID, 'base_url', $adminBaseUrl) ?: $adminBaseUrl;
