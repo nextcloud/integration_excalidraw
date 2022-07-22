@@ -1,7 +1,7 @@
 <template>
 	<div class="creationForm">
 		<h2>
-			{{ t('integration_excalidraw', 'Create a board') }}
+			{{ t('integration_excalidraw', 'Create a room') }}
 		</h2>
 		<div class="fields">
 			<div v-for="(field, fieldId) in fields"

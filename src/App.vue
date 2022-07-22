@@ -25,7 +25,7 @@
 				</template>
 				<span class="emptyContentWrapper">
 					<span>
-						{{ t('integration_excalidraw', 'You haven\'t created any session yet') }}
+						{{ t('integration_excalidraw', 'You haven\'t created any room yet') }}
 					</span>
 					<Button
 						class="createButton"
@@ -33,7 +33,7 @@
 						<template #icon>
 							<PlusIcon />
 						</template>
-						{{ t('integration_excalidraw', 'Create a session') }}
+						{{ t('integration_excalidraw', 'Create a room') }}
 					</Button>
 				</span>
 			</EmptyContent>
@@ -41,7 +41,7 @@
 				<template #icon>
 					<ExcalidrawIcon />
 				</template>
-				{{ t('integration_excalidraw', 'No selected session') }}
+				{{ t('integration_excalidraw', 'No selected room') }}
 			</EmptyContent>
 		</AppContent>
 		<Modal v-if="creationModalOpen"
@@ -151,7 +151,7 @@ export default {
 			}
 			const url = generateUrl('/apps/integration_excalidraw/board')
 			axios.post(url, req).then((response) => {
-				showSuccess(t('integration_excalidraw', 'New session was created in Excalidraw'))
+				showSuccess(t('integration_excalidraw', 'New room was created'))
 				board.id = response.data?.id
 				board.key = response.data?.key
 				board.trash = false
@@ -160,7 +160,7 @@ export default {
 				this.creationModalOpen = false
 			}).catch((error) => {
 				showError(
-					t('integration_excalidraw', 'Failed to create new session')
+					t('integration_excalidraw', 'Failed to create new room')
 					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? '')
 				)
 				console.debug(error)
@@ -178,7 +178,7 @@ export default {
 			axios.delete(url).then((response) => {
 			}).catch((error) => {
 				showError(
-					t('integration_excalidraw', 'Failed to delete the session')
+					t('integration_excalidraw', 'Failed to delete the room')
 					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? '')
 				)
 				console.debug(error)

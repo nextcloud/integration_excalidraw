@@ -34,10 +34,10 @@ export function delay(callback, ms) {
 export const fields = {
 	name: {
 		icon: TextIcon,
-		label: t('integration_excalidraw', 'Session name'),
+		label: t('integration_excalidraw', 'Room name'),
 		type: 'text',
-		placeholder: t('integration_excalidraw', 'Session name'),
-		default: 'New session',
+		placeholder: t('integration_excalidraw', 'Room name'),
+		default: t('integration_excalidraw', 'New room'),
 		mandatory: true,
 	},
 }

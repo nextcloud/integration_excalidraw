@@ -355,7 +355,7 @@ export default {
 			const token = this.selectedRoom.token
 			const url = generateOcsUrl('/apps/spreed/api/v1/chat/{token}', { token })
 			const req = {
-				message: t('integration_excalidraw', 'Excalidraw session "{name}": {link}', {
+				message: t('integration_excalidraw', 'Excalidraw room "{name}": {link}', {
 					link: this.publicLink,
 					name: this.board.name,
 				}),

@@ -2,7 +2,7 @@
 	<AppNavigation>
 		<template #list>
 			<AppNavigationNew v-if="isConfigured"
-				:text="t('integration_excalidraw', 'Create a board')"
+				:text="t('integration_excalidraw', 'Create a room')"
 				button-class="icon-add"
 				@click="onCreateBoardClick" />
 			<BoardNavigationItem v-for="board in boards"
