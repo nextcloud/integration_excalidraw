@@ -19,7 +19,10 @@ use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 
 use OCA\Files\Event\LoadAdditionalScriptsEvent;
+use OCP\AppFramework\Services\IInitialState;
+use OCP\IConfig;
 use OCP\Security\CSP\AddContentSecurityPolicyEvent;
+use OCP\Util;
 
 /**
  * Class Application
@@ -47,6 +50,25 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function boot(IBootContext $context): void {
+		$context->injectFn(function (
+			IInitialState $initialState,
+			IConfig $config,
+			?string $userId
+		) {
+			/*
+			if (!$userId) {
+				return;
+			}
+			*/
+
+			$initialState->provideLazyInitialState('base_url', function () use ($config) {
+				return $config->getAppValue(self::APP_ID, 'base_url', self::DEFAULT_BASE_URL) ?: self::DEFAULT_BASE_URL;
+			});
+			$initialState->provideLazyInitialState('override_link_click', function () use ($config) {
+				return $config->getAppValue(self::APP_ID, 'override_link_click') === '1';
+			});
+			Util::addScript(self::APP_ID, self::APP_ID . '-standalone');
+		});
 	}
 }
 

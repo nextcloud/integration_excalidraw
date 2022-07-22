@@ -47,7 +47,8 @@ class AddContentSecurityPolicyListener implements IEventListener {
 		$csp = new ContentSecurityPolicy();
 		$csp->addAllowedFrameDomain('\'self\'');
 		$csp->addAllowedFrameAncestorDomain('\'self\'');
-		$csp->addAllowedFrameDomain(Application::DEFAULT_BASE_URL);
+		$baseUrl = $this->config->getAppValue(Application::APP_ID, 'base_url', Application::DEFAULT_BASE_URL) ?: Application::DEFAULT_BASE_URL;
+		$csp->addAllowedFrameDomain($baseUrl);
 
 		$event->addPolicy($csp);
 	}

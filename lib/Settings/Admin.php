@@ -29,10 +29,12 @@ class Admin implements ISettings {
 	 * @return TemplateResponse
 	 */
 	public function getForm(): TemplateResponse {
-		$nothing = $this->config->getAppValue(Application::APP_ID, 'nothing');
+		$baseUrl = $this->config->getAppValue(Application::APP_ID, 'base_url', Application::DEFAULT_BASE_URL) ?: Application::DEFAULT_BASE_URL;
+		$overrideLinkClick = $this->config->getAppValue(Application::APP_ID, 'override_link_click') === '1';
 
 		$adminConfig = [
-			'nothing' => $nothing,
+			'base_url' => $baseUrl,
+			'override_link_click' => $overrideLinkClick,
 		];
 		$this->initialStateService->provideInitialState('admin-config', $adminConfig);
 		return new TemplateResponse(Application::APP_ID, 'adminSettings');

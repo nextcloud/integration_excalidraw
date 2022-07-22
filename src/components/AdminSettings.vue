@@ -4,15 +4,23 @@
 			<ExcalidrawIcon class="icon" />
 			{{ t('integration_excalidraw', 'Excalidraw whiteboard integration') }}
 		</h2>
-		<Button @click="modalOpen = true">
-			<template #icon>
-				<ExcalidrawIcon />
-			</template>
-			{{ t('integration_excalidraw', 'Open modal') }}
-		</Button>
-		<ExcalidrawModal v-if="modalOpen"
-			:board-url="boardUrl"
-			@close="modalOpen = false" />
+		<div class="field">
+			<label for="base-url">
+				<EarthIcon :size="20" class="icon" />
+				{{ t('integration_excalidraw', 'Excalidraw instance address') }}
+			</label>
+			<input id="base-url"
+				v-model="state.base_url"
+				type="text"
+				:placeholder="t('integration_excalidraw', 'Instance address')"
+				@input="onInput">
+		</div>
+		<CheckboxRadioSwitch
+			class="field"
+			:checked.sync="state.override_link_click"
+			@update:checked="onOverrideChanged">
+			{{ t('integration_excalidraw', 'Open Excalidraw links in Nextcloud') }}
+		</CheckboxRadioSwitch>
 	</div>
 </template>
 
@@ -21,19 +29,19 @@ import { loadState } from '@nextcloud/initial-state'
 import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
-import Button from '@nextcloud/vue/dist/Components/Button'
+import CheckboxRadioSwitch from '@nextcloud/vue/dist/Components/CheckboxRadioSwitch'
 
 import { delay } from '../utils'
 import ExcalidrawIcon from './icons/ExcalidrawIcon'
-import ExcalidrawModal from './ExcalidrawModal'
+import EarthIcon from 'vue-material-design-icons/Earth'
 
 export default {
 	name: 'AdminSettings',
 
 	components: {
-		ExcalidrawModal,
 		ExcalidrawIcon,
-		Button,
+		CheckboxRadioSwitch,
+		EarthIcon,
 	},
 
 	props: [],
@@ -41,8 +49,6 @@ export default {
 	data() {
 		return {
 			state: loadState('integration_excalidraw', 'admin-config'),
-			modalOpen: false,
-			boardUrl: 'https://excalidraw.com/#room=976bb714733bb0b0ca3d,jkVi7KC6Bj5cxkpX2MI1LA',
 		}
 	},
 
@@ -56,6 +62,9 @@ export default {
 	},
 
 	methods: {
+		onOverrideChanged(newValue) {
+			this.saveOptions({ override_link_click: newValue ? '1' : '0' })
+		},
 		onInput() {
 			delay(() => {
 				this.saveOptions({ base_url: this.state.base_url })
@@ -66,17 +75,16 @@ export default {
 				values,
 			}
 			const url = generateUrl('/apps/integration_excalidraw/admin-config')
-			axios.put(url, req)
-				.then((response) => {
-					showSuccess(t('integration_excalidraw', 'Excalidraw admin options saved'))
-				}).catch((error) => {
-					showError(
-						t('integration_excalidraw', 'Failed to save Excalidraw options')
-						+ ': ' + error.response?.request?.responseText
-					)
-					console.error(error)
-				}).then(() => {
-				})
+			axios.put(url, req).then((response) => {
+				showSuccess(t('integration_excalidraw', 'Excalidraw admin options saved'))
+			}).catch((error) => {
+				showError(
+					t('integration_excalidraw', 'Failed to save Excalidraw options')
+					+ ': ' + error.response?.request?.responseText
+				)
+				console.error(error)
+			}).then(() => {
+			})
 		},
 	},
 }
@@ -84,6 +92,25 @@ export default {
 
 <style scoped lang="scss">
 #excalidraw_prefs {
+	.field {
+		display: flex;
+		align-items: center;
+		margin-left: 30px;
+
+		input,
+		label {
+			width: 300px;
+		}
+
+		label {
+			display: flex;
+			align-items: center;
+		}
+		.icon {
+			margin-right: 8px;
+		}
+	}
+
 	h2 {
 		display: flex;
 		align-items: center;
@@ -91,10 +118,5 @@ export default {
 			margin-right: 12px;
 		}
 	}
-}
-
-.frame {
-	width: 100%;
-	height: 100%;
 }
 </style>
