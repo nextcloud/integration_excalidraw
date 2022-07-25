@@ -432,5 +432,9 @@ export default {
 			margin-left: 8px;
 		}
 	}
+
+	#conversations {
+		padding-right: 16px;
+	}
 }
 </style>
