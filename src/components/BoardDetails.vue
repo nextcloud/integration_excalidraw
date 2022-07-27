@@ -5,26 +5,6 @@
 				{{ board.name }}
 			</h2>
 			<div class="links">
-				<div class="link">
-					<LinkVariantIcon :size="20" />
-					<label>
-						{{ t('integration_excalidraw', 'Public board link') }}
-					</label>
-					<div class="linkInputWrapper">
-						<input type="text" :readonly="true" :value="publicLink">
-						<a :href="publicLink" @click.prevent.stop="copyLink(false)">
-							<Button v-tooltip.bottom="{ content: t('integration_excalidraw', 'Copy to clipboard') }">
-								<template #icon>
-									<CheckIcon v-if="publicLinkCopied"
-										class="copiedIcon"
-										:size="16" />
-									<ClippyIcon v-else
-										:size="16" />
-								</template>
-							</Button>
-						</a>
-					</div>
-				</div>
 				<div class="buttons">
 					<div class="modal-button-wrapper">
 						<Button @click="showExcalidrawModal = true">
@@ -59,98 +39,124 @@
 							@close="showTalkModal = false" />
 					</div>
 				</div>
+				<div class="link">
+					<div class="leftPart">
+						<LinkVariantIcon :size="20" />
+						<label>
+							{{ t('integration_excalidraw', 'Public board link') }}
+						</label>
+					</div>
+					<div class="rightPart linkInputWrapper">
+						<input type="text" :readonly="true" :value="publicLink">
+						<a :href="publicLink" @click.prevent.stop="copyLink(false)">
+							<Button v-tooltip.bottom="{ content: t('integration_excalidraw', 'Copy to clipboard') }">
+								<template #icon>
+									<CheckIcon v-if="publicLinkCopied"
+										class="copiedIcon"
+										:size="16" />
+									<ClippyIcon v-else
+										:size="16" />
+								</template>
+							</Button>
+						</a>
+					</div>
+				</div>
 			</div>
 			<div class="fields">
 				<div v-for="(field, fieldId) in fieldsToDisplay"
 					:key="fieldId"
 					class="field">
-					<component :is="field.icon"
-						v-if="field.icon"
-						:size="20" />
-					<span v-else class="emptyIcon" />
-					<label class="fieldLabel">
-						{{ field.label }}
-					</label>
-					<label v-if="['ncCheckbox'].includes(field.type)"
-						:id="'board-' + fieldId + '-value'"
-						class="fieldValue multiple">
-						<component :is="field.enabledIcon"
-							v-if="board[fieldId] && field.enabledIcon"
+					<div class="leftPart">
+						<component :is="field.icon"
+							v-if="field.icon"
 							:size="20" />
-						<component :is="field.disabledIcon"
-							v-else-if="!board[fieldId] && field.disabledIcon"
-							:size="20" />
-						<CheckboxMarkedIcon v-else-if="board[fieldId]" :size="20" />
-						<CheckboxBlankOutlineIcon v-else-if="!board[fieldId]" :size="20" />
-						{{ board[fieldId] ? t('integration_excalidraw', 'Enabled') : t('integration_excalidraw', 'Disabled') }}
-					</label>
-					<label v-if="['ncSwitch'].includes(field.type)"
-						:id="'board-' + fieldId + '-value'"
-						class="fieldValue multiple">
-						<component :is="field.enabledIcon"
-							v-if="board[fieldId] && field.enabledIcon"
-							:size="20" />
-						<component :is="field.disabledIcon"
-							v-else-if="!board[fieldId] && field.disabledIcon"
-							:size="20" />
-						<ToggleSwitchIcon v-else-if="board[fieldId]" :size="20" />
-						<ToggleSwitchOffOutlineIcon v-else-if="!board[fieldId]" :size="20" />
-						{{ board[fieldId] ? t('integration_excalidraw', 'Enabled') : t('integration_excalidraw', 'Disabled') }}
-					</label>
-					<label v-if="['text'].includes(field.type)"
-						:id="'board-' + fieldId + '-value'"
-						class="fieldValue">
-						{{ board[fieldId] }}
-					</label>
-					<div v-if="['password'].includes(field.type)" class="password-input-wrapper">
-						<label
+						<span v-else class="emptyIcon" />
+						<label class="fieldLabel">
+							{{ field.label }}
+						</label>
+					</div>
+					<div class="rightPart">
+						<label v-if="['ncCheckbox'].includes(field.type)"
+							:id="'board-' + fieldId + '-value'"
+							class="fieldValue multiple">
+							<component :is="field.enabledIcon"
+								v-if="board[fieldId] && field.enabledIcon"
+								:size="20" />
+							<component :is="field.disabledIcon"
+								v-else-if="!board[fieldId] && field.disabledIcon"
+								:size="20" />
+							<CheckboxMarkedIcon v-else-if="board[fieldId]" :size="20" />
+							<CheckboxBlankOutlineIcon v-else-if="!board[fieldId]" :size="20" />
+							{{ board[fieldId] ? t('integration_excalidraw', 'Enabled') : t('integration_excalidraw', 'Disabled') }}
+						</label>
+						<label v-if="['ncSwitch'].includes(field.type)"
+							:id="'board-' + fieldId + '-value'"
+							class="fieldValue multiple">
+							<component :is="field.enabledIcon"
+								v-if="board[fieldId] && field.enabledIcon"
+								:size="20" />
+							<component :is="field.disabledIcon"
+								v-else-if="!board[fieldId] && field.disabledIcon"
+								:size="20" />
+							<ToggleSwitchIcon v-else-if="board[fieldId]" :size="20" />
+							<ToggleSwitchOffOutlineIcon v-else-if="!board[fieldId]" :size="20" />
+							{{ board[fieldId] ? t('integration_excalidraw', 'Enabled') : t('integration_excalidraw', 'Disabled') }}
+						</label>
+						<label v-if="['text'].includes(field.type)"
 							:id="'board-' + fieldId + '-value'"
 							class="fieldValue">
-							{{ field.view ? board[fieldId] : discify(board[fieldId]) }}
+							{{ board[fieldId] }}
 						</label>
-						<EyeOutlineIcon v-if="field.view" @click="field.view = false" />
-						<EyeOffOutlineIcon v-else @click="field.view = true" />
-					</div>
-					<label v-else-if="['ncDate'].includes(field.type)"
-						:id="'board-' + fieldId + '-value'"
-						class="fieldValue">
-						{{ getFormattedDate(board[fieldId]) }}
-					</label>
-					<label v-else-if="['ncDatetime'].includes(field.type)"
-						:id="'board-' + fieldId + '-value'"
-						class="fieldValue">
-						{{ getFormattedDatetime(board[fieldId]) }}
-					</label>
-					<label v-else-if="['ncColor'].includes(field.type)"
-						:id="'board-' + fieldId + '-value'"
-						class="fieldValue">
-						<div class="colorDot" :style="{ 'background-color': board[fieldId] }" />
-					</label>
-					<textarea v-if="['textarea'].includes(field.type)"
-						:id="'board-' + fieldId + '-value'"
-						class="fieldValue"
-						:value="board[fieldId]"
-						:readonly="true" />
-					<label v-else-if="['select', 'customRadioSet', 'ncRadioSet'].includes(field.type)"
-						:for="'board-' + fieldId + '-value'"
-						class="fieldValue multiple">
-						<component :is="field.options[board[fieldId]].icon"
-							v-if="field.options[board[fieldId]].icon"
-							:size="20" />
-						{{ field.options[board[fieldId]].label }}
-					</label>
-					<label v-else-if="['ncCheckboxSet'].includes(field.type)"
-						:for="'board-' + fieldId + '-value'"
-						class="fieldValue multipleVertical">
-						<div v-for="optionId in board[fieldId]"
-							:key="optionId"
-							class="oneValue">
-							<component :is="field.options[optionId].icon"
-								v-if="field.options[optionId].icon"
-								:size="20" />
-							{{ field.options[optionId].label }}
+						<div v-if="['password'].includes(field.type)" class="password-input-wrapper">
+							<label
+								:id="'board-' + fieldId + '-value'"
+								class="fieldValue">
+								{{ field.view ? board[fieldId] : discify(board[fieldId]) }}
+							</label>
+							<EyeOutlineIcon v-if="field.view" @click="field.view = false" />
+							<EyeOffOutlineIcon v-else @click="field.view = true" />
 						</div>
-					</label>
+						<label v-else-if="['ncDate'].includes(field.type)"
+							:id="'board-' + fieldId + '-value'"
+							class="fieldValue">
+							{{ getFormattedDate(board[fieldId]) }}
+						</label>
+						<label v-else-if="['ncDatetime'].includes(field.type)"
+							:id="'board-' + fieldId + '-value'"
+							class="fieldValue">
+							{{ getFormattedDatetime(board[fieldId]) }}
+						</label>
+						<label v-else-if="['ncColor'].includes(field.type)"
+							:id="'board-' + fieldId + '-value'"
+							class="fieldValue">
+							<div class="colorDot" :style="{ 'background-color': board[fieldId] }" />
+						</label>
+						<textarea v-if="['textarea'].includes(field.type)"
+							:id="'board-' + fieldId + '-value'"
+							class="fieldValue"
+							:value="board[fieldId]"
+							:readonly="true" />
+						<label v-else-if="['select', 'customRadioSet', 'ncRadioSet'].includes(field.type)"
+							:for="'board-' + fieldId + '-value'"
+							class="fieldValue multiple">
+							<component :is="field.options[board[fieldId]].icon"
+								v-if="field.options[board[fieldId]].icon"
+								:size="20" />
+							{{ field.options[board[fieldId]].label }}
+						</label>
+						<label v-else-if="['ncCheckboxSet'].includes(field.type)"
+							:for="'board-' + fieldId + '-value'"
+							class="fieldValue multipleVertical">
+							<div v-for="optionId in board[fieldId]"
+								:key="optionId"
+								class="oneValue">
+								<component :is="field.options[optionId].icon"
+									v-if="field.options[optionId].icon"
+									:size="20" />
+								{{ field.options[optionId].label }}
+							</div>
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -291,36 +297,35 @@ export default {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	max-width: 700px;
 	// background-color: var(--color-primary-element-lighter);
 	// background-color: var(--color-primary-light);
 	box-shadow: 0 0 10px var(--color-box-shadow);
 	border-radius: var(--border-radius-large);
+	padding: 0 12px;
 	h2 {
 		margin: 12px 0 32px 0;
 	}
 	.fields {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
+
 		.field {
 			display: flex;
 			align-items: center;
 			margin: 8px 0;
 			padding: 8px;
 			border-radius: var(--border-radius);
+			flex-wrap: wrap;
+
 			&:hover {
 				background-color: var(--color-background-hover);
-			}
-			> * {
-				margin: 0 8px 0 8px;
 			}
 			.emptyIcon {
 				width: 20px;
 			}
-			.fieldLabel {
-				width: 250px;
-			}
-			> .fieldValue {
-				width: 300px;
+			.fieldValue {
 				&.multiple {
 					display: flex;
 					> * {
@@ -361,19 +366,24 @@ export default {
 	.links {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
 		.link {
 			display: flex;
 			align-items: center;
 			margin: 6px 0 6px 0;
+			width: 100%;
+			flex-wrap: wrap;
+
 			> * {
 				margin: 0 8px 0 8px;
 			}
-			label {
-				width: 250px;
-			}
 			.linkInputWrapper {
 				display: flex;
-				width: 300px;
+				align-items: center;
+				justify-content: center;
 				input {
 					flex-grow: 1;
 				}
@@ -389,13 +399,27 @@ export default {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			flex-wrap: wrap;
+			//max-width: 600px;
+			margin-bottom: 8px;
 			> * {
-				margin: 0 8px;
+				margin: 4px 8px;
 			}
 			.talk-button-wrapper {
 				display: flex;
 				justify-content: center;
 			}
+		}
+	}
+
+	.rightPart,
+	.leftPart {
+		min-width: 200px;
+		display: flex;
+		flex-grow: 1;
+
+		> * {
+			margin: 0 8px 0 8px;
 		}
 	}
 }
