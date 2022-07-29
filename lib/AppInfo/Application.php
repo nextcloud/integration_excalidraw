@@ -11,7 +11,6 @@ namespace OCA\Excalidraw\AppInfo;
 
 use OCA\Excalidraw\Listener\AddContentSecurityPolicyListener;
 use OCA\Excalidraw\Listener\LoadFileScriptListener;
-use OCA\Excalidraw\Listener\LoadViewerListener;
 use OCA\Viewer\Event\LoadViewer;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
@@ -45,7 +44,6 @@ class Application extends App implements IBootstrap {
 
 	public function register(IRegistrationContext $context): void {
 //		$context->registerEventListener(LoadAdditionalScriptsEvent::class, LoadFileScriptListener::class);
-//		$context->registerEventListener(LoadViewer::class, LoadViewerListener::class);
 		$context->registerEventListener(AddContentSecurityPolicyEvent::class, AddContentSecurityPolicyListener::class);
 	}
 
