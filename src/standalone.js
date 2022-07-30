@@ -29,7 +29,7 @@ function listen(baseUrl) {
 	body.addEventListener('click', (e) => {
 		const link = (e.target.tagName === 'A')
 			? e.target
-			: (e.target.parentElement.tagName === 'A')
+			: (e.target.parentElement?.tagName === 'A')
 				? e.target.parentElement
 				: null
 		if (link !== null) {
