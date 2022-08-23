@@ -34,6 +34,9 @@ function listen(baseUrl) {
 				: null
 		if (link !== null) {
 			const href = link.getAttribute('href')
+			if (!href) {
+				return
+			}
 			if (href.startsWith(baseUrl + '/')) {
 				e.preventDefault()
 				e.stopPropagation()
