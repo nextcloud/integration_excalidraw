@@ -1,5 +1,5 @@
 <template>
-	<Content app-name="integration_excalidraw">
+	<NcContent app-name="integration_excalidraw">
 		<ExcalidrawNavigation
 			:boards="activeBoards"
 			:selected-board-id="selectedBoardId"
@@ -27,14 +27,14 @@
 					<span>
 						{{ t('integration_excalidraw', 'You haven\'t created any room yet') }}
 					</span>
-					<Button
+					<NcButton
 						class="createButton"
 						@click="onCreateBoardClick">
 						<template #icon>
 							<PlusIcon />
 						</template>
 						{{ t('integration_excalidraw', 'Create a room') }}
-					</Button>
+					</NcButton>
 				</span>
 			</EmptyContent>
 			<EmptyContent v-else>
@@ -53,27 +53,29 @@
 				@ok-clicked="onCreationValidate"
 				@cancel-clicked="closeCreationModal" />
 		</Modal>
-	</Content>
+	</NcContent>
 </template>
 
 <script>
-import PlusIcon from 'vue-material-design-icons/Plus'
-import Button from '@nextcloud/vue/dist/Components/Button'
-import AppContent from '@nextcloud/vue/dist/Components/AppContent'
-import Content from '@nextcloud/vue/dist/Components/Content'
-import Modal from '@nextcloud/vue/dist/Components/Modal'
-import EmptyContent from '@nextcloud/vue/dist/Components/EmptyContent'
+import PlusIcon from 'vue-material-design-icons/Plus.vue'
+
+import ExcalidrawIcon from './components/icons/ExcalidrawIcon.vue'
+
+import NcButton from '@nextcloud/vue/dist/Components/Button.js'
+import AppContent from '@nextcloud/vue/dist/Components/AppContent.js'
+import NcContent from '@nextcloud/vue/dist/Components/Content.js'
+import Modal from '@nextcloud/vue/dist/Components/Modal.js'
+import EmptyContent from '@nextcloud/vue/dist/Components/EmptyContent.js'
 
 import { generateUrl } from '@nextcloud/router'
 import { loadState } from '@nextcloud/initial-state'
 import axios from '@nextcloud/axios'
 import { showSuccess, showError, showUndo } from '@nextcloud/dialogs'
 
-import ExcalidrawNavigation from './components/ExcalidrawNavigation'
-import CreationForm from './components/CreationForm'
-import BoardDetails from './components/BoardDetails'
-import ExcalidrawIcon from './components/icons/ExcalidrawIcon'
-import { Timer } from './utils'
+import ExcalidrawNavigation from './components/ExcalidrawNavigation.vue'
+import CreationForm from './components/CreationForm.vue'
+import BoardDetails from './components/BoardDetails.vue'
+import { Timer } from './utils.js'
 
 export default {
 	name: 'App',
@@ -85,10 +87,10 @@ export default {
 		ExcalidrawNavigation,
 		PlusIcon,
 		AppContent,
-		Content,
+		NcContent,
 		Modal,
 		EmptyContent,
-		Button,
+		NcButton,
 	},
 
 	props: {

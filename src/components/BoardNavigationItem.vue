@@ -24,13 +24,13 @@
 </template>
 
 <script>
-import DeleteIcon from 'vue-material-design-icons/Delete'
-import ClipboardEditIcon from 'vue-material-design-icons/ClipboardEdit'
-import ClipboardEditOutlineIcon from 'vue-material-design-icons/ClipboardEditOutline'
+import DeleteIcon from 'vue-material-design-icons/Delete.vue'
+import ClipboardEditIcon from 'vue-material-design-icons/ClipboardEdit.vue'
+import ClipboardEditOutlineIcon from 'vue-material-design-icons/ClipboardEditOutline.vue'
 import ClickOutside from 'vue-click-outside'
 
-import ActionButton from '@nextcloud/vue/dist/Components/ActionButton'
-import AppNavigationItem from '@nextcloud/vue/dist/Components/AppNavigationItem'
+import ActionButton from '@nextcloud/vue/dist/Components/ActionButton.js'
+import AppNavigationItem from '@nextcloud/vue/dist/Components/AppNavigationItem.js'
 
 export default {
 	name: 'BoardNavigationItem',

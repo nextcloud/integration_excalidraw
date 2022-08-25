@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import RadioElement from './RadioElement'
+import RadioElement from './RadioElement.vue'
 
 export default {
 	name: 'RadioElementSet',

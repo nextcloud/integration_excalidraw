@@ -66,7 +66,7 @@
 					<ColorPicker
 						:value="newBoard[fieldId]"
 						@input="updateColor($event, fieldId)">
-						<Button
+						<NcButton
 							v-tooltip.top="{ content: t('integration_excalidraw', 'Choose color') }"
 							:style="{ backgroundColor: newBoard[fieldId] }" />
 					</ColorPicker>
@@ -167,34 +167,34 @@
 		</div>
 		<div class="excalidraw-footer">
 			<div class="spacer" />
-			<Button @click="$emit('cancel-clicked')">
+			<NcButton @click="$emit('cancel-clicked')">
 				{{ t('integration_excalidraw', 'Cancel') }}
-			</Button>
-			<Button type="primary" @click="onOkClick">
+			</NcButton>
+			<NcButton type="primary" @click="onOkClick">
 				<template #icon>
 					<CheckIcon :class="{ 'icon-loading': loading }" />
 				</template>
 				{{ t('integration_excalidraw', 'Create') }}
-			</Button>
+			</NcButton>
 		</div>
 	</div>
 </template>
 
 <script>
-import EyeOutlineIcon from 'vue-material-design-icons/EyeOutline'
-import EyeOffOutlineIcon from 'vue-material-design-icons/EyeOffOutline'
-import PaletteIcon from 'vue-material-design-icons/Palette'
-import CheckIcon from 'vue-material-design-icons/Check'
-import Button from '@nextcloud/vue/dist/Components/Button'
-import Multiselect from '@nextcloud/vue/dist/Components/Multiselect'
-import ColorPicker from '@nextcloud/vue/dist/Components/ColorPicker'
-import DatetimePicker from '@nextcloud/vue/dist/Components/DatetimePicker'
-import Highlight from '@nextcloud/vue/dist/Components/Highlight'
-import CheckboxRadioSwitch from '@nextcloud/vue/dist/Components/CheckboxRadioSwitch'
+import EyeOutlineIcon from 'vue-material-design-icons/EyeOutline.vue'
+import EyeOffOutlineIcon from 'vue-material-design-icons/EyeOffOutline.vue'
+import PaletteIcon from 'vue-material-design-icons/Palette.vue'
+import CheckIcon from 'vue-material-design-icons/Check.vue'
+import NcButton from '@nextcloud/vue/dist/Components/Button.js'
+import Multiselect from '@nextcloud/vue/dist/Components/Multiselect.js'
+import ColorPicker from '@nextcloud/vue/dist/Components/ColorPicker.js'
+import DatetimePicker from '@nextcloud/vue/dist/Components/DatetimePicker.js'
+import Highlight from '@nextcloud/vue/dist/Components/Highlight.js'
+import CheckboxRadioSwitch from '@nextcloud/vue/dist/Components/CheckboxRadioSwitch.js'
 import { showError } from '@nextcloud/dialogs'
 
-import { fields } from '../utils'
-import RadioElementSet from './RadioElementSet'
+import { fields } from '../utils.js'
+import RadioElementSet from './RadioElementSet.vue'
 
 export default {
 	name: 'CreationForm',
@@ -205,7 +205,7 @@ export default {
 		PaletteIcon,
 		EyeOutlineIcon,
 		EyeOffOutlineIcon,
-		Button,
+		NcButton,
 		Multiselect,
 		DatetimePicker,
 		ColorPicker,

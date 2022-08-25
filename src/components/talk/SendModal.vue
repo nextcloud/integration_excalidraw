@@ -85,17 +85,17 @@
 			<div class="spacer" />
 			<div class="modal-footer">
 				<div class="spacer" />
-				<Button @click="$emit('close')">
+				<NcButton @click="$emit('close')">
 					{{ t('integration_excalidraw', 'Cancel') }}
-				</Button>
-				<Button type="primary"
+				</NcButton>
+				<NcButton type="primary"
 					:disabled="selectedRoom === null"
 					@click="onSendLinkClick">
 					<template #icon>
 						<SendIcon :class="{ 'icon-loading': sending }" />
 					</template>
 					{{ t('integration_excalidraw', 'Send') }}
-				</Button>
+				</NcButton>
 			</div>
 		</div>
 	</Modal>
@@ -103,16 +103,16 @@
 
 <script>
 
-import CloseIcon from 'vue-material-design-icons/Close'
-import SendIcon from 'vue-material-design-icons/Send'
-import Modal from '@nextcloud/vue/dist/Components/Modal'
-import Avatar from '@nextcloud/vue/dist/Components/Avatar'
-import Button from '@nextcloud/vue/dist/Components/Button'
-import ListItem from '@nextcloud/vue/dist/Components/ListItem'
+import CloseIcon from 'vue-material-design-icons/Close.vue'
+import SendIcon from 'vue-material-design-icons/Send.vue'
+import Modal from '@nextcloud/vue/dist/Components/Modal.js'
+import Avatar from '@nextcloud/vue/dist/Components/Avatar.js'
+import NcButton from '@nextcloud/vue/dist/Components/Button.js'
+import ListItem from '@nextcloud/vue/dist/Components/ListItem.js'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import { generateOcsUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
-import { delay } from '../../utils'
+import { delay } from '../../utils.js'
 
 const CONVERSATION_TYPE = {
 	ONE_TO_ONE: 1,
@@ -125,7 +125,7 @@ export default {
 	name: 'SendModal',
 
 	components: {
-		Button,
+		NcButton,
 		Avatar,
 		Modal,
 		SendIcon,

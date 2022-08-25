@@ -1,4 +1,4 @@
-import TextIcon from 'vue-material-design-icons/Text'
+import TextIcon from 'vue-material-design-icons/Text.vue'
 
 export function Timer(callback, mydelay) {
 	let timerId

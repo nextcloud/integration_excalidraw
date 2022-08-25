@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ExcalidrawModal from './ExcalidrawModal'
+import ExcalidrawModal from './ExcalidrawModal.vue'
 
 export default {
 	name: 'ExcalidrawModalWrapper',

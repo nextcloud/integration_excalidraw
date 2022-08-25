@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import './bootstrap'
+import './bootstrap.js'
 import { loadState } from '@nextcloud/initial-state'
-import ExcalidrawModalWrapper from './components/ExcalidrawModalWrapper'
+import ExcalidrawModalWrapper from './components/ExcalidrawModalWrapper.vue'
 
 function init() {
 	if (!OCA.Excalidraw) {

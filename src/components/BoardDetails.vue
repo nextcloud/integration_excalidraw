@@ -7,32 +7,32 @@
 			<div class="links">
 				<div class="buttons">
 					<div class="modal-button-wrapper">
-						<Button @click="showExcalidrawModal = true">
+						<NcButton @click="showExcalidrawModal = true">
 							<template #icon>
 								<DockWindowIcon :size="20" />
 							</template>
 							{{ t('integration_excalidraw', 'Open here') }}
-						</Button>
+						</NcButton>
 						<ExcalidrawModal v-if="showExcalidrawModal"
 							:board-url="publicLink"
 							@close="showExcalidrawModal = false" />
 					</div>
 					<a :href="publicLink" target="_blank">
-						<Button>
+						<NcButton>
 							<template #icon>
 								<OpenInNewIcon :size="20" />
 							</template>
 							{{ t('integration_excalidraw', 'Open in a new tab') }}
-						</Button>
+						</NcButton>
 					</a>
 					<div v-if="talkEnabled"
 						class="talk-button-wrapper">
-						<Button @click="showTalkModal = true">
+						<NcButton @click="showTalkModal = true">
 							<template #icon>
 								<TalkIcon :size="20" />
 							</template>
 							{{ t('integration_excalidraw', 'Share link to a Talk conversation') }}
-						</Button>
+						</NcButton>
 						<SendModal v-if="showTalkModal"
 							:board="board"
 							:excalidraw-url="excalidrawUrl"
@@ -49,7 +49,7 @@
 					<div class="rightPart linkInputWrapper">
 						<input type="text" :readonly="true" :value="publicLink">
 						<a :href="publicLink" @click.prevent.stop="copyLink(false)">
-							<Button v-tooltip.bottom="{ content: t('integration_excalidraw', 'Copy to clipboard') }">
+							<NcButton v-tooltip.bottom="{ content: t('integration_excalidraw', 'Copy to clipboard') }">
 								<template #icon>
 									<CheckIcon v-if="publicLinkCopied"
 										class="copiedIcon"
@@ -57,7 +57,7 @@
 									<ClippyIcon v-else
 										:size="16" />
 								</template>
-							</Button>
+							</NcButton>
 						</a>
 					</div>
 				</div>
@@ -164,27 +164,27 @@
 </template>
 
 <script>
-import { fields, Timer } from '../utils'
+import { fields, Timer } from '../utils.js'
 import moment from '@nextcloud/moment'
-import ShieldLinkVariantIcon from 'vue-material-design-icons/ShieldLinkVariant'
-import LinkVariantIcon from 'vue-material-design-icons/LinkVariant'
-import ToggleSwitchIcon from 'vue-material-design-icons/ToggleSwitch'
-import ToggleSwitchOffOutlineIcon from 'vue-material-design-icons/ToggleSwitchOffOutline'
-import CheckboxMarkedIcon from 'vue-material-design-icons/CheckboxMarked'
-import CheckboxBlankOutlineIcon from 'vue-material-design-icons/CheckboxBlankOutline'
-import CheckIcon from 'vue-material-design-icons/Check'
-import EyeOutlineIcon from 'vue-material-design-icons/EyeOutline'
-import EyeOffOutlineIcon from 'vue-material-design-icons/EyeOffOutline'
-import DockWindowIcon from 'vue-material-design-icons/DockWindow'
-import OpenInNewIcon from 'vue-material-design-icons/OpenInNew'
+import ShieldLinkVariantIcon from 'vue-material-design-icons/ShieldLinkVariant.vue'
+import LinkVariantIcon from 'vue-material-design-icons/LinkVariant.vue'
+import ToggleSwitchIcon from 'vue-material-design-icons/ToggleSwitch.vue'
+import ToggleSwitchOffOutlineIcon from 'vue-material-design-icons/ToggleSwitchOffOutline.vue'
+import CheckboxMarkedIcon from 'vue-material-design-icons/CheckboxMarked.vue'
+import CheckboxBlankOutlineIcon from 'vue-material-design-icons/CheckboxBlankOutline.vue'
+import CheckIcon from 'vue-material-design-icons/Check.vue'
+import EyeOutlineIcon from 'vue-material-design-icons/EyeOutline.vue'
+import EyeOffOutlineIcon from 'vue-material-design-icons/EyeOffOutline.vue'
+import DockWindowIcon from 'vue-material-design-icons/DockWindow.vue'
+import OpenInNewIcon from 'vue-material-design-icons/OpenInNew.vue'
 
-import TalkIcon from './talk/TalkIcon'
-import ClippyIcon from './icons/ClippyIcon'
+import TalkIcon from './talk/TalkIcon.vue'
+import ClippyIcon from './icons/ClippyIcon.vue'
 
-import Button from '@nextcloud/vue/dist/Components/Button'
+import NcButton from '@nextcloud/vue/dist/Components/Button.js'
 import { showSuccess, showError } from '@nextcloud/dialogs'
-import SendModal from './talk/SendModal'
-import ExcalidrawModal from './ExcalidrawModal'
+import SendModal from './talk/SendModal.vue'
+import ExcalidrawModal from './ExcalidrawModal.vue'
 
 export default {
 	name: 'BoardDetails',
@@ -205,7 +205,7 @@ export default {
 		EyeOffOutlineIcon,
 		DockWindowIcon,
 		OpenInNewIcon,
-		Button,
+		NcButton,
 	},
 
 	props: {

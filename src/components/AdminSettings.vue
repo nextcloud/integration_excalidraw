@@ -25,15 +25,17 @@
 </template>
 
 <script>
+import EarthIcon from 'vue-material-design-icons/Earth.vue'
+
+import ExcalidrawIcon from './icons/ExcalidrawIcon.vue'
+
 import { loadState } from '@nextcloud/initial-state'
 import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
-import CheckboxRadioSwitch from '@nextcloud/vue/dist/Components/CheckboxRadioSwitch'
+import CheckboxRadioSwitch from '@nextcloud/vue/dist/Components/CheckboxRadioSwitch.js'
 
-import { delay } from '../utils'
-import ExcalidrawIcon from './icons/ExcalidrawIcon'
-import EarthIcon from 'vue-material-design-icons/Earth'
+import { delay } from '../utils.js'
 
 export default {
 	name: 'AdminSettings',
