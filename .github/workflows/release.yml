@@ -12,10 +12,13 @@ jobs:
       APP_ID: integration_excalidraw
     runs-on: ubuntu-latest
     steps:
-      - name: Use Node 10
-        uses: actions/setup-node@v1
+      - name: Use Node 16
+        uses: actions/setup-node@v2
         with:
-          node-version: 10
+          node-version: 16
+
+      - name: Set up npm
+        run: npm i -g npm@^8.0.0
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -96,7 +99,7 @@ jobs:
           asset_name: ${{ steps.build_release.outputs.app_id }}-${{ steps.build_release.outputs.version }}.tar.gz
           asset_content_type: application/gzip
 
-      - name: Publish to appstore
+      - name: Publish normal release to appstore
         if: ${{ startsWith( steps.tag.outputs.currenttag , 'v' ) && !endsWith( steps.tag.outputs.currenttag , 'nightly' ) }}
         id: publish
         run: |
@@ -107,7 +110,7 @@ jobs:
         env:
           APPSTORE_TOKEN: ${{ secrets.APPSTORE_TOKEN }}
 
-      - name: Publish nightly build to appstore
+      - name: Publish nightly release to appstore
         if: ${{ startsWith( steps.tag.outputs.currenttag , 'v' ) && endsWith( steps.tag.outputs.currenttag , 'nightly' ) }}
         id: nightly
         run: |
