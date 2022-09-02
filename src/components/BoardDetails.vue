@@ -164,8 +164,6 @@
 </template>
 
 <script>
-import { fields, Timer } from '../utils.js'
-import moment from '@nextcloud/moment'
 import ShieldLinkVariantIcon from 'vue-material-design-icons/ShieldLinkVariant.vue'
 import LinkVariantIcon from 'vue-material-design-icons/LinkVariant.vue'
 import ToggleSwitchIcon from 'vue-material-design-icons/ToggleSwitch.vue'
@@ -178,10 +176,13 @@ import EyeOffOutlineIcon from 'vue-material-design-icons/EyeOffOutline.vue'
 import DockWindowIcon from 'vue-material-design-icons/DockWindow.vue'
 import OpenInNewIcon from 'vue-material-design-icons/OpenInNew.vue'
 
+import { fields, Timer } from '../utils.js'
+import moment from '@nextcloud/moment'
+
 import TalkIcon from './talk/TalkIcon.vue'
 import ClippyIcon from './icons/ClippyIcon.vue'
 
-import NcButton from '@nextcloud/vue/dist/Components/Button.js'
+import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import SendModal from './talk/SendModal.vue'
 import ExcalidrawModal from './ExcalidrawModal.vue'

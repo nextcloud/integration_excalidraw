@@ -1,5 +1,5 @@
 <template>
-	<AppNavigationItem
+	<NcAppNavigationItem
 		:title="board.name"
 		:class="{ selectedBoard: selected }"
 		:force-menu="true"
@@ -11,16 +11,16 @@
 				:size="20" />
 		</template>
 		<template #actions>
-			<ActionButton
+			<NcActionButton
 				:close-after-click="true"
 				@click="onDeleteClick">
 				<template #icon>
 					<DeleteIcon :size="20" />
 				</template>
 				{{ t('integration_excalidraw', 'Delete') }}
-			</ActionButton>
+			</NcActionButton>
 		</template>
-	</AppNavigationItem>
+	</NcAppNavigationItem>
 </template>
 
 <script>
@@ -29,14 +29,14 @@ import ClipboardEditIcon from 'vue-material-design-icons/ClipboardEdit.vue'
 import ClipboardEditOutlineIcon from 'vue-material-design-icons/ClipboardEditOutline.vue'
 import ClickOutside from 'vue-click-outside'
 
-import ActionButton from '@nextcloud/vue/dist/Components/ActionButton.js'
-import AppNavigationItem from '@nextcloud/vue/dist/Components/AppNavigationItem.js'
+import NcActionButton from '@nextcloud/vue/dist/Components/NcActionButton.js'
+import NcAppNavigationItem from '@nextcloud/vue/dist/Components/NcAppNavigationItem.js'
 
 export default {
 	name: 'BoardNavigationItem',
 	components: {
-		AppNavigationItem,
-		ActionButton,
+		NcAppNavigationItem,
+		NcActionButton,
 		ClipboardEditIcon,
 		ClipboardEditOutlineIcon,
 		DeleteIcon,

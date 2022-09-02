@@ -1,10 +1,13 @@
 <template>
-	<AppNavigation>
+	<NcAppNavigation>
 		<template #list>
-			<AppNavigationNew v-if="isConfigured"
+			<NcAppNavigationNew v-if="isConfigured"
 				:text="t('integration_excalidraw', 'Create a room')"
-				button-class="icon-add"
-				@click="onCreateBoardClick" />
+				@click="onCreateBoardClick">
+				<template #icon>
+					<PlusIcon />
+				</template>
+			</NcAppNavigationNew>
 			<BoardNavigationItem v-for="board in boards"
 				:key="board.id"
 				class="boardItem"
@@ -13,12 +16,14 @@
 				@board-clicked="onBoardClicked"
 				@delete-board="onBoardDeleted" />
 		</template>
-	</AppNavigation>
+	</NcAppNavigation>
 </template>
 
 <script>
-import AppNavigationNew from '@nextcloud/vue/dist/Components/AppNavigationNew.js'
-import AppNavigation from '@nextcloud/vue/dist/Components/AppNavigation.js'
+import PlusIcon from 'vue-material-design-icons/Plus.vue'
+
+import NcAppNavigationNew from '@nextcloud/vue/dist/Components/NcAppNavigationNew.js'
+import NcAppNavigation from '@nextcloud/vue/dist/Components/NcAppNavigation.js'
 import BoardNavigationItem from './BoardNavigationItem.vue'
 
 export default {
@@ -26,8 +31,9 @@ export default {
 
 	components: {
 		BoardNavigationItem,
-		AppNavigationNew,
-		AppNavigation,
+		NcAppNavigationNew,
+		NcAppNavigation,
+		PlusIcon,
 	},
 
 	props: {

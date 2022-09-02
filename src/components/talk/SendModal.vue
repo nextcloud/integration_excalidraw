@@ -1,10 +1,11 @@
 <template>
-	<Modal
+	<NcModal
 		class="send-modal"
 		size="small"
 		@close="$emit('close')">
 		<div class="modal-content">
 			<h2>
+				<TalkIcon class="icon" />
 				{{ t('integration_excalidraw', 'Send link to a Talk room') }}
 			</h2>
 			<div class="input-wrapper">
@@ -21,7 +22,7 @@
 						{{ t('integration_excalidraw', 'Conversations') }}
 					</h3>
 					<ul>
-						<ListItem v-for="c in conversationsToShow"
+						<NcListItem v-for="c in conversationsToShow"
 							:key="'conv-' + c.id"
 							:title="c.displayName"
 							:active="selectedRoom && selectedRoom.id === c.id"
@@ -31,15 +32,15 @@
 								{{ c.description }}
 							</template>
 							<template #icon>
-								<Avatar v-if="c.type === CONVERSATION_TYPE.ONE_TO_ONE"
+								<NcAvatar v-if="c.type === CONVERSATION_TYPE.ONE_TO_ONE"
 									:size="34"
 									:user="c.name"
 									:disable-menu="true" />
-								<Avatar v-else
+								<NcAvatar v-else
 									:size="34"
 									icon-class="icon-group" />
 							</template>
-						</ListItem>
+						</NcListItem>
 					</ul>
 				</div>
 				<div v-show="usersToShow.length > 0" id="users">
@@ -47,19 +48,19 @@
 						{{ t('integration_excalidraw', 'Users') }}
 					</h3>
 					<ul>
-						<ListItem v-for="c in usersToShow"
+						<NcListItem v-for="c in usersToShow"
 							:key="'user-' + c.id"
 							:title="c.displayName"
 							:active="selectedRoom && selectedRoom.id === c.id"
 							:bold="selectedRoom && selectedRoom.id === c.id"
 							@click="selectedRoom = c">
 							<template #icon>
-								<Avatar
+								<NcAvatar
 									:size="34"
 									:user="c.name"
 									:disable-menu="true" />
 							</template>
-						</ListItem>
+						</NcListItem>
 					</ul>
 				</div>
 				<div v-show="groupsToShow.length > 0" id="groups">
@@ -67,18 +68,18 @@
 						{{ t('integration_excalidraw', 'Groups') }}
 					</h3>
 					<ul>
-						<ListItem v-for="c in groupsToShow"
+						<NcListItem v-for="c in groupsToShow"
 							:key="'group-' + c.id"
 							:title="c.displayName"
 							:active="selectedRoom && selectedRoom.id === c.id"
 							:bold="selectedRoom && selectedRoom.id === c.id"
 							@click="selectedRoom = c">
 							<template #icon>
-								<Avatar
+								<NcAvatar
 									:size="34"
 									icon-class="icon-group" />
 							</template>
-						</ListItem>
+						</NcListItem>
 					</ul>
 				</div>
 			</div>
@@ -98,17 +99,19 @@
 				</NcButton>
 			</div>
 		</div>
-	</Modal>
+	</NcModal>
 </template>
 
 <script>
-
 import CloseIcon from 'vue-material-design-icons/Close.vue'
 import SendIcon from 'vue-material-design-icons/Send.vue'
-import Modal from '@nextcloud/vue/dist/Components/Modal.js'
-import Avatar from '@nextcloud/vue/dist/Components/Avatar.js'
-import NcButton from '@nextcloud/vue/dist/Components/Button.js'
-import ListItem from '@nextcloud/vue/dist/Components/ListItem.js'
+
+import TalkIcon from './TalkIcon.vue'
+
+import NcModal from '@nextcloud/vue/dist/Components/NcModal.js'
+import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
+import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import NcListItem from '@nextcloud/vue/dist/Components/NcListItem.js'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import { generateOcsUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
@@ -126,11 +129,12 @@ export default {
 
 	components: {
 		NcButton,
-		Avatar,
-		Modal,
+		NcAvatar,
+		NcModal,
 		SendIcon,
 		CloseIcon,
-		ListItem,
+		NcListItem,
+		TalkIcon,
 	},
 
 	props: {
@@ -395,7 +399,12 @@ export default {
 	flex-direction: column;
 
 	h2 {
-		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.icon {
+			margin-right: 8px;
+		}
 	}
 
 	h3 {

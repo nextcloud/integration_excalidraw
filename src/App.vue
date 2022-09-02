@@ -7,7 +7,7 @@
 			@create-board-clicked="onCreateBoardClick"
 			@board-clicked="onBoardClicked"
 			@delete-board="onBoardDeleted" />
-		<AppContent
+		<NcAppContent
 			:list-max-width="50"
 			:list-min-width="20"
 			:list-size="20"
@@ -19,14 +19,12 @@
 				:board="selectedBoard"
 				:excalidraw-url="state.base_url"
 				:talk-enabled="state.talk_enabled" />
-			<EmptyContent v-else-if="activeBoardCount === 0">
+			<NcEmptyContent v-else-if="activeBoardCount === 0"
+				:title="t('integration_excalidraw', 'You haven\'t created any room yet')">
 				<template #icon>
 					<ExcalidrawIcon />
 				</template>
-				<span class="emptyContentWrapper">
-					<span>
-						{{ t('integration_excalidraw', 'You haven\'t created any room yet') }}
-					</span>
+				<template #action>
 					<NcButton
 						class="createButton"
 						@click="onCreateBoardClick">
@@ -35,16 +33,16 @@
 						</template>
 						{{ t('integration_excalidraw', 'Create a room') }}
 					</NcButton>
-				</span>
-			</EmptyContent>
-			<EmptyContent v-else>
+				</template>
+			</NcEmptyContent>
+			<NcEmptyContent v-else
+				:title="t('integration_excalidraw', 'No selected room')">
 				<template #icon>
 					<ExcalidrawIcon />
 				</template>
-				{{ t('integration_excalidraw', 'No selected room') }}
-			</EmptyContent>
-		</AppContent>
-		<Modal v-if="creationModalOpen"
+			</NcEmptyContent>
+		</NcAppContent>
+		<NcModal v-if="creationModalOpen"
 			size="small"
 			@close="closeCreationModal">
 			<CreationForm
@@ -52,7 +50,7 @@
 				focus-on-field="name"
 				@ok-clicked="onCreationValidate"
 				@cancel-clicked="closeCreationModal" />
-		</Modal>
+		</NcModal>
 	</NcContent>
 </template>
 
@@ -61,11 +59,11 @@ import PlusIcon from 'vue-material-design-icons/Plus.vue'
 
 import ExcalidrawIcon from './components/icons/ExcalidrawIcon.vue'
 
-import NcButton from '@nextcloud/vue/dist/Components/Button.js'
-import AppContent from '@nextcloud/vue/dist/Components/AppContent.js'
-import NcContent from '@nextcloud/vue/dist/Components/Content.js'
-import Modal from '@nextcloud/vue/dist/Components/Modal.js'
-import EmptyContent from '@nextcloud/vue/dist/Components/EmptyContent.js'
+import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import NcAppContent from '@nextcloud/vue/dist/Components/NcAppContent.js'
+import NcContent from '@nextcloud/vue/dist/Components/NcContent.js'
+import NcModal from '@nextcloud/vue/dist/Components/NcModal.js'
+import NcEmptyContent from '@nextcloud/vue/dist/Components/NcEmptyContent.js'
 
 import { generateUrl } from '@nextcloud/router'
 import { loadState } from '@nextcloud/initial-state'
@@ -86,10 +84,10 @@ export default {
 		BoardDetails,
 		ExcalidrawNavigation,
 		PlusIcon,
-		AppContent,
+		NcAppContent,
 		NcContent,
-		Modal,
-		EmptyContent,
+		NcModal,
+		NcEmptyContent,
 		NcButton,
 	},
 
@@ -224,12 +222,6 @@ body {
 }
 
 .settings {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.emptyContentWrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;

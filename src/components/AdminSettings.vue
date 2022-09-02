@@ -15,12 +15,12 @@
 				:placeholder="t('integration_excalidraw', 'Instance address')"
 				@input="onInput">
 		</div>
-		<CheckboxRadioSwitch
+		<NcCheckboxRadioSwitch
 			class="field"
 			:checked.sync="state.override_link_click"
 			@update:checked="onOverrideChanged">
 			{{ t('integration_excalidraw', 'Open Excalidraw links in Nextcloud') }}
-		</CheckboxRadioSwitch>
+		</NcCheckboxRadioSwitch>
 	</div>
 </template>
 
@@ -33,7 +33,7 @@ import { loadState } from '@nextcloud/initial-state'
 import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
-import CheckboxRadioSwitch from '@nextcloud/vue/dist/Components/CheckboxRadioSwitch.js'
+import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
 
 import { delay } from '../utils.js'
 
@@ -42,7 +42,7 @@ export default {
 
 	components: {
 		ExcalidrawIcon,
-		CheckboxRadioSwitch,
+		NcCheckboxRadioSwitch,
 		EarthIcon,
 	},
 

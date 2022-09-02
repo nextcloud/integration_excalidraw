@@ -1,23 +1,24 @@
 <template>
-	<Modal
+	<NcModal
 		size="full"
+		:close-button-contained="false"
 		@close="$emit('close')">
 		<iframe
 			class="frame"
 			frameborder="0"
 			:allowFullScreen="true"
 			:src="boardUrl" />
-	</Modal>
+	</NcModal>
 </template>
 
 <script>
-import Modal from '@nextcloud/vue/dist/Components/Modal.js'
+import NcModal from '@nextcloud/vue/dist/Components/NcModal.js'
 
 export default {
 	name: 'ExcalidrawModal',
 
 	components: {
-		Modal,
+		NcModal,
 	},
 
 	props: {

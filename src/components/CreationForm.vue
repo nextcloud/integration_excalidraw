@@ -185,12 +185,14 @@ import EyeOutlineIcon from 'vue-material-design-icons/EyeOutline.vue'
 import EyeOffOutlineIcon from 'vue-material-design-icons/EyeOffOutline.vue'
 import PaletteIcon from 'vue-material-design-icons/Palette.vue'
 import CheckIcon from 'vue-material-design-icons/Check.vue'
-import NcButton from '@nextcloud/vue/dist/Components/Button.js'
-import Multiselect from '@nextcloud/vue/dist/Components/Multiselect.js'
-import ColorPicker from '@nextcloud/vue/dist/Components/ColorPicker.js'
-import DatetimePicker from '@nextcloud/vue/dist/Components/DatetimePicker.js'
-import Highlight from '@nextcloud/vue/dist/Components/Highlight.js'
-import CheckboxRadioSwitch from '@nextcloud/vue/dist/Components/CheckboxRadioSwitch.js'
+
+import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import NcMultiselect from '@nextcloud/vue/dist/Components/NcMultiselect.js'
+import NcColorPicker from '@nextcloud/vue/dist/Components/NcColorPicker.js'
+import NcDatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker.js'
+import NcHighlight from '@nextcloud/vue/dist/Components/NcHighlight.js'
+import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
+
 import { showError } from '@nextcloud/dialogs'
 
 import { fields } from '../utils.js'
@@ -206,11 +208,11 @@ export default {
 		EyeOutlineIcon,
 		EyeOffOutlineIcon,
 		NcButton,
-		Multiselect,
-		DatetimePicker,
-		ColorPicker,
-		Highlight,
-		CheckboxRadioSwitch,
+		NcMultiselect,
+		NcDatetimePicker,
+		NcColorPicker,
+		NcHighlight,
+		NcCheckboxRadioSwitch,
 	},
 
 	props: {
