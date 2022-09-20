@@ -3,8 +3,9 @@
 	<id>integration_excalidraw</id>
 	<name>Excalidraw integration</name>
 	<summary>Collaborative whiteboard integration</summary>
-	<description><![CDATA[Modern collaborative whiteboard in Nextcloud.]]></description>
-	<version>0.0.2</version>
+	<description><![CDATA[Modern collaborative whiteboard in Nextcloud.
+This integration app lets users create Excalidraw boards, share board links and open boards directly in Nextcloud.]]></description>
+	<version>2.0.0</version>
 	<licence>agpl</licence>
 	<author>Julien Veyssier</author>
 	<namespace>Excalidraw</namespace>
@@ -12,6 +13,8 @@
 	<website>https://github.com/eneiluj/integration_excalidraw</website>
 	<bugs>https://github.com/eneiluj/integration_excalidraw/issues</bugs>
 	<screenshot>https://raw.githubusercontent.com/eneiluj/integration_excalidraw/master/img/screenshot1.jpg</screenshot>
+	<screenshot>https://raw.githubusercontent.com/eneiluj/integration_excalidraw/master/img/screenshot2.jpg</screenshot>
+	<screenshot>https://raw.githubusercontent.com/eneiluj/integration_excalidraw/master/img/screenshot3.jpg</screenshot>
 	<dependencies>
 		<nextcloud min-version="25" max-version="26"/>
 	</dependencies>
