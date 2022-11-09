@@ -1,0 +1,6 @@
+{ "translations": {
+    "Connected accounts" : "Tilkopla kontoar",
+    "Enabled" : "Aktivert",
+    "Disabled" : "Deaktivert"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

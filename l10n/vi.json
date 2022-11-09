@@ -1,0 +1,8 @@
+{ "translations": {
+    "Enabled" : "Đá kích hoạt",
+    "Disabled" : "Đã vô hiệu",
+    "Conversations" : "Đàm thoại",
+    "Groups" : "Nhóm",
+    "Send" : "Gửi"
+},"pluralForm" :"nplurals=1; plural=0;"
+}
