@@ -1,4 +1,7 @@
 { "translations": {
+    "Delete" : "Delete",
+    "Cancel" : "Cancel",
+    "Users" : "Users",
     "Groups" : "Groups",
     "Send" : "Send"
 },"pluralForm" :"nplurals=1; plural=0;"

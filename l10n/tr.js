@@ -7,8 +7,13 @@ OC.L10N.register(
     "Enabled" : "Etkin",
     "Disabled" : "Devre dışı",
     "Public link copied!" : "Herkese açık bağlantı kopyalandı!",
+    "Delete" : "Sil",
+    "Cancel" : "İptal",
+    "Create" : "Ekle",
     "Conversations" : "Görüşmeler",
+    "Users" : "Kullanıcılar",
     "Groups" : "Gruplar",
-    "Send" : "Gönder"
+    "Send" : "Gönder",
+    "Room name" : "Oda adı"
 },
 "nplurals=2; plural=(n > 1);");

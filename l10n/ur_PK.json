@@ -1,4 +1,7 @@
 { "translations": {
+    "Delete" : "حذف کریں",
+    "Cancel" : "منسوخ کریں",
+    "Users" : "صارفین",
     "Send" : "بھجیں"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

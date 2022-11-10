@@ -4,6 +4,13 @@ OC.L10N.register(
     "Copy to clipboard" : "Copiar dins lo quichapapièrs",
     "Enabled" : "Activada",
     "Disabled" : "Desactivat",
-    "Conversations" : "Discussions"
+    "Delete" : "Suprimir",
+    "Cancel" : "Anullar",
+    "Create" : "Crear",
+    "Conversations" : "Discussions",
+    "Users" : "Utilizaires",
+    "Groups" : "Gropes",
+    "Send" : "Enviar",
+    "Room name" : "Nom de la sala"
 },
 "nplurals=2; plural=(n > 1);");

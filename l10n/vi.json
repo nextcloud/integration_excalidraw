@@ -1,8 +1,13 @@
 { "translations": {
     "Enabled" : "Đá kích hoạt",
     "Disabled" : "Đã vô hiệu",
+    "Delete" : "Xóa",
+    "Cancel" : "Hủy",
+    "Create" : "‎Tạo‎",
     "Conversations" : "Đàm thoại",
+    "Users" : "Người dùng",
     "Groups" : "Nhóm",
-    "Send" : "Gửi"
+    "Send" : "Gửi",
+    "Room name" : "Tên phòng"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -1,0 +1,8 @@
+{ "translations": {
+    "Delete" : "հեռացնել",
+    "Cancel" : "ընդհատել",
+    "Create" : "Ստեղծել",
+    "Groups" : "Խմբեր",
+    "Send" : "Ուղարկել"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

@@ -1,4 +1,8 @@
 { "translations": {
+    "Delete" : "நீக்குக",
+    "Cancel" : "இரத்து செய்க",
+    "Create" : "உருவாக்குக",
+    "Users" : "பயனாளர்",
     "Groups" : "குழுக்கள்"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

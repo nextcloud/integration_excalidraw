@@ -1,0 +1,9 @@
+{ "translations": {
+    "Delete" : "Skrap",
+    "Cancel" : "Kanselleer",
+    "Create" : "Skep",
+    "Users" : "Gebruikers",
+    "Groups" : "Groepe",
+    "Send" : "Stuur"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
