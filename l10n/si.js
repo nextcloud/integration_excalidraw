@@ -4,6 +4,10 @@ OC.L10N.register(
     "Connected accounts" : "සම්බන්ධිත ගිණුම්",
     "Enabled" : "සබල කර ඇත",
     "Disabled" : "අබල කර ඇත",
-    "Groups" : "සමූහ"
+    "Cancel" : "අවලංගු කරන්න",
+    "Create" : "සාදන්න",
+    "Users" : "පරිශීලකයින්",
+    "Groups" : "සමූහ",
+    "Send" : "යවන්න"
 },
 "nplurals=2; plural=(n != 1);");

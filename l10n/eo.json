@@ -1,0 +1,12 @@
+{ "translations": {
+    "Copy to clipboard" : "Kopii tondejen",
+    "Enabled" : "Ŝaltita",
+    "Disabled" : "Malŝaltita",
+    "Delete" : "Forigi",
+    "Cancel" : "Nuligi",
+    "Create" : "Krei",
+    "Users" : "Uzantoj",
+    "Groups" : "Grupoj",
+    "Send" : "Sendi"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

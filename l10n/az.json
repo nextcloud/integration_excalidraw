@@ -1,0 +1,11 @@
+{ "translations": {
+    "Enabled" : "İşə salınıb",
+    "Disabled" : "Dayandırılıb",
+    "Delete" : "Sil",
+    "Cancel" : "Dayandır",
+    "Create" : "Yarat",
+    "Users" : "İstifadəçilər",
+    "Groups" : "Qruplar",
+    "Send" : "Göndər"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

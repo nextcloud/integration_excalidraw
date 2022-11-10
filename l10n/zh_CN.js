@@ -7,8 +7,13 @@ OC.L10N.register(
     "Enabled" : "已启用",
     "Disabled" : "已禁用",
     "Public link copied!" : "已复制公开链接！",
+    "Delete" : "删除",
+    "Cancel" : "取消",
+    "Create" : "创建",
     "Conversations" : "会话",
+    "Users" : "用户",
     "Groups" : "用户组",
-    "Send" : "发送"
+    "Send" : "发送",
+    "Room name" : "房间名"
 },
 "nplurals=1; plural=0;");

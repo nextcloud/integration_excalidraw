@@ -1,0 +1,8 @@
+{ "translations": {
+    "Delete" : "ړنګول",
+    "Cancel" : "پرېښول",
+    "Users" : "کارنان",
+    "Groups" : "ګروپونه",
+    "Send" : "لېږل"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

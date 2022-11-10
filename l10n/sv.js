@@ -6,7 +6,13 @@ OC.L10N.register(
     "Enabled" : "Aktiverad",
     "Disabled" : "Inaktiverad",
     "Public link copied!" : "Offentlig länk kopierad!",
+    "Delete" : "Radera",
+    "Cancel" : "Avbryt",
+    "Create" : "Skapa",
     "Conversations" : "Konversationer",
-    "Groups" : "Grupper"
+    "Users" : "Användare",
+    "Groups" : "Grupper",
+    "Send" : "Skicka",
+    "Room name" : "Rumsnamn"
 },
 "nplurals=2; plural=(n != 1);");

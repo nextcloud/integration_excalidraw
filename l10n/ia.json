@@ -1,0 +1,10 @@
+{ "translations": {
+    "Enabled" : "Activate",
+    "Delete" : "Deler",
+    "Cancel" : "Cancellar",
+    "Create" : "Crear",
+    "Users" : "Usatores",
+    "Groups" : "Gruppos",
+    "Send" : "Inviar"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
