@@ -9,11 +9,6 @@ OC.L10N.register(
     "Public link copied!" : "Öffentlicher Link kopiert",
     "Delete" : "Löschen",
     "Cancel" : "Abbrechen",
-    "Create" : "Benötigt keine Übersetzung. Hier wird nur die formelle Übersetzung verwendet (de_DE).",
-    "Conversations" : "Benötigt keine Übersetzung. Hier wird nur die formelle Übersetzung verwendet (de_DE).",
-    "Users" : "Benötigt keine Übersetzung. Hier wird nur die formelle Übersetzung verwendet (de_DE).",
-    "Groups" : "Benötigt keine Übersetzung. Hier wird nur die formelle Übersetzung verwendet (de_DE).",
-    "Send" : "Benötigt keine Übersetzung. Hier wird nur die formelle Übersetzung verwendet (de_DE).",
     "Room name" : "Raumname"
 },
 "nplurals=2; plural=(n != 1);");
