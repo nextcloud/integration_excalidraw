@@ -2,11 +2,17 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Prijungtos paskyros",
+    "Failed to create new room" : "Nepavyko sukurti naujo kambario",
+    "Failed to delete the room" : "Nepavyko ištrinti kambario",
+    "{name} deleted" : "{name} ištrintas",
     "Instance address" : "Egzemplioriaus adresas",
+    "Open here" : "Atverti čia",
+    "Open in a new tab" : "Atverti naujoje kortelėje",
     "Copy to clipboard" : "Kopijuoti į iškarpinę",
     "Enabled" : "Įjungta",
     "Disabled" : "Išjungta",
     "Public link copied!" : "Viešoji nuoroda nukopijuota!",
+    "Link could not be copied to clipboard" : "Nepavyko nukopijuoti nuorodos į iškarpinę",
     "Delete" : "Ištrinti",
     "Cancel" : "Atsisakyti",
     "Create" : "Sukurti",
@@ -14,6 +20,8 @@ OC.L10N.register(
     "Users" : "Naudotojai",
     "Groups" : "Grupės",
     "Send" : "Siųsti",
-    "Room name" : "Kambario pavadinimas"
+    "Failed to send link" : "Nepavyko išsiųsti nuorodos",
+    "Room name" : "Kambario pavadinimas",
+    "New room" : "Naujas kambarys"
 },
 "nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);");
