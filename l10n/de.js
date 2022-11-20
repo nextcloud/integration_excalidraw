@@ -2,6 +2,7 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Verbundene Konten",
+    "You haven't created any room yet" : "Du hast bislang keinen Raum erstellt.",
     "Instance address" : "Adresse der Instanz",
     "Copy to clipboard" : "In die Zwischenablage kopieren",
     "Enabled" : "Aktiviert",
@@ -9,6 +10,8 @@ OC.L10N.register(
     "Public link copied!" : "Öffentlicher Link kopiert",
     "Delete" : "Löschen",
     "Cancel" : "Abbrechen",
+    "You created a conversation with {name}" : "Du hast eine Unterhaltung mit {name} erstellt.",
+    "You joined {name}" : "Du bist {name} beigetreten.",
     "Room name" : "Raumname"
 },
 "nplurals=2; plural=(n != 1);");
