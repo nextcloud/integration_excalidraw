@@ -6,6 +6,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Копировать в буфер",
     "Enabled" : "Включено",
     "Disabled" : "Отключено",
+    "Public link copied!" : "Общедоступная ссылка скопирована",
     "Delete" : "Удалить",
     "Cancel" : "Отменить",
     "Create" : "Создать",
