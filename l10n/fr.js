@@ -17,10 +17,12 @@ OC.L10N.register(
     "Choose color" : "Sélectionnez une couleur",
     "Cancel" : "Annuler",
     "Create" : "Créer",
+    "Field \"{name}\" is missing" : "Le fichier \"{name}\" est manquant",
     "Conversations" : "Discussions",
     "Users" : "Utilisateurs",
     "Groups" : "Groupes",
     "Send" : "Envoyer",
+    "Link sent to {name}" : "Lien envoyé à {name}",
     "Room name" : "Nom du salon de discussion"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
