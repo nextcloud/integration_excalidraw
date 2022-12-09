@@ -12,7 +12,7 @@ OC.L10N.register(
     "New room was created" : "Създадена е нова стая",
     "Failed to create new room" : "Неуспешно създаване на нова стая",
     "Failed to delete the room" : "Неуспешно изтриване на стаята",
-    "{name} deleted" : "{name} изтрит",
+    "{name} deleted" : "{name} изтрит/о",
     "Excalidraw whiteboard integration" : "Интеграция на бяла дъска Excalidraw",
     "Excalidraw instance address" : "Адрес на екземпляр на Excalidraw",
     "Instance address" : "Адрес на екземпляр",
