@@ -2,6 +2,7 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Conturile conectate",
+    "Copy to clipboard" : "Copiază în clipboard",
     "Enabled" : "Activat",
     "Disabled" : "Dezactivați",
     "Delete" : "Șterge",
