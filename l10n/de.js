@@ -12,6 +12,8 @@ OC.L10N.register(
     "Cancel" : "Abbrechen",
     "You created a conversation with {name}" : "Du hast eine Unterhaltung mit {name} erstellt.",
     "You joined {name}" : "Du bist {name} beigetreten.",
-    "Room name" : "Raumname"
+    "Link sent to {name}" : "Link an {name} versandt",
+    "Room name" : "Raumname",
+    "New room" : "Neuer Raum"
 },
 "nplurals=2; plural=(n != 1);");
