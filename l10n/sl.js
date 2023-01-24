@@ -6,6 +6,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Kopiraj v odložišče",
     "Enabled" : "Omogočeno",
     "Disabled" : "Onemogočeno",
+    "Public link copied!" : "Povezava je kopirana!",
     "Delete" : "Izbriši",
     "Cancel" : "Prekliči",
     "Create" : "Ustvarjeno",
