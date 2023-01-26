@@ -2,8 +2,8 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Copy to clipboard" : "คัดลอกไปยังคลิปบอร์ด",
-    "Enabled" : "เปิดการใช้งาน",
-    "Disabled" : "ปิดการใช้งาน",
+    "Enabled" : "เปิดใช้งาน",
+    "Disabled" : "ปิดใช้งาน",
     "Delete" : "ลบ",
     "Cancel" : "ยกเลิก",
     "Create" : "สร้าง",
