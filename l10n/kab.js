@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Copy to clipboard" : "Copier dans le presse-papiers",
     "Enabled" : "Yermed",
     "Disabled" : "Ittwarermed",
     "Delete" : "Kkes",
