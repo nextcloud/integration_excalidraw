@@ -6,6 +6,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Kopiëren naar het klembord",
     "Enabled" : "Ingeschakeld",
     "Disabled" : "Uitgeschakeld",
+    "Public link copied!" : "Openbare link gekopieerd!",
     "Delete" : "Verwijder",
     "Cancel" : "Annuleren",
     "Create" : "Creëer",
