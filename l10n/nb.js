@@ -4,6 +4,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Kopiert til utklippstavlen",
     "Enabled" : "Aktivert",
     "Disabled" : "Deaktivert",
+    "Public link copied!" : "Offentlig lenke er kopiert!",
     "Delete" : "Slett",
     "Cancel" : "Avbryt",
     "Create" : "Opprett",
