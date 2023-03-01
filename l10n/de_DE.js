@@ -33,7 +33,7 @@ OC.L10N.register(
     "Cancel" : "Abbrechen",
     "Create" : "Erstellen",
     "Field \"{name}\" is missing" : "Feld \"{name}\" fehlt",
-    "Send link to a Talk room" : "Link zu einem Unterhaltungsraum senden",
+    "Send link to a Talk room" : "Link an einen Unterhaltungsraum senden",
     "Search for users, groups or conversations" : "Nach Benutzern, Gruppen oder Unterhaltungen suchen",
     "Conversations" : "Unterhaltungen",
     "Users" : "Benutzer",
