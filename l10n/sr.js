@@ -4,6 +4,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Копирај у оставу",
     "Enabled" : "укључено",
     "Disabled" : "Искључено",
+    "Public link copied!" : "Јавни линк је корипан!",
     "Delete" : "Избриши",
     "Cancel" : "Откажи",
     "Create" : "Направи",
