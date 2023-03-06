@@ -1,7 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
-    "Copy to clipboard" : "Скопіювати до буферу обміну ",
+    "Copy to clipboard" : "Копіювати до буферу обміну",
     "Enabled" : "Увімкнено",
     "Disabled" : "Вимкнено",
     "Public link copied!" : "Публічне посилання скопійовано!",
