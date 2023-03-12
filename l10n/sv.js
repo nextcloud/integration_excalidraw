@@ -9,6 +9,7 @@ OC.L10N.register(
     "Delete" : "Radera",
     "Cancel" : "Avbryt",
     "Create" : "Skapa",
+    "Search for users, groups or conversations" : "Sök efter användare, grupper eller konversationer",
     "Conversations" : "Konversationer",
     "Users" : "Användare",
     "Groups" : "Grupper",
