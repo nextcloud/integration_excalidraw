@@ -1,6 +1,9 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Connected accounts" : "Akun terhubung",
+    "Instance address" : "Alamat server",
+    "Copy to clipboard" : "Salin ke papan klip",
     "Enabled" : "Diaktifkan",
     "Disabled" : "Dinonaktifkan",
     "Delete" : "Hapus",
