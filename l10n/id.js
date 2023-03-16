@@ -6,6 +6,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Salin ke papan klip",
     "Enabled" : "Diaktifkan",
     "Disabled" : "Dinonaktifkan",
+    "Public link copied!" : "Tautan publik disalin!",
     "Delete" : "Hapus",
     "Cancel" : "Membatalkan",
     "Create" : "Buat",
