@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Connected accounts" : "حسابات مترابطة",
     "Copy to clipboard" : "نسخ الرابط",
     "Enabled" : "مفعلة",
     "Disabled" : "معطّل",
