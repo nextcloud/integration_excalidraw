@@ -34,7 +34,7 @@ OC.L10N.register(
     "Create" : "Ekle",
     "Field \"{name}\" is missing" : "\"{name}\" alanı eksik",
     "Send link to a Talk room" : "Bağlantıyı bir Talk odasına gönder",
-    "Search for users, groups or conversations" : "Kullanıcı, grup ve görüşme arama",
+    "Search for users, groups or conversations" : "Kullanıcı, grup ya da görüşme ara",
     "Conversations" : "Görüşmeler",
     "Users" : "Kullanıcılar",
     "Groups" : "Gruplar",
