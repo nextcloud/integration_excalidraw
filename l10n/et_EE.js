@@ -4,6 +4,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Kopeeri lõikepuhvrisse",
     "Enabled" : "Lubatud",
     "Disabled" : "Keelatud",
+    "Public link copied!" : "Avalik link kopeeritud!",
     "Delete" : "Kustuta",
     "Cancel" : "Loobu",
     "Create" : "Loo",
