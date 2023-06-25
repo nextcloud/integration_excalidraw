@@ -5,6 +5,7 @@ OC.L10N.register(
     "Copy to clipboard" : "클립보드로 복사",
     "Enabled" : "활성화됨",
     "Disabled" : "비활성화됨",
+    "Public link copied!" : "공개 링크 복사!",
     "Delete" : "삭제",
     "Cancel" : "취소",
     "Create" : "생성",
