@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Connected accounts" : "Підключені облікові записи",
     "Copy to clipboard" : "Копіювати до буферу обміну",
     "Enabled" : "Увімкнено",
     "Disabled" : "Вимкнено",
