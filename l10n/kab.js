@@ -7,6 +7,7 @@ OC.L10N.register(
     "Delete" : "Kkes",
     "Cancel" : "Sefsex",
     "Create" : "Snulfu-d",
+    "Conversations" : "Idiwenniyen",
     "Users" : "Iseqdacen",
     "Groups" : "Igrawen",
     "Send" : "Tuzna"
