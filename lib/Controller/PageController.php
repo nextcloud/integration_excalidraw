@@ -74,7 +74,7 @@ class PageController extends Controller {
 	 */
 	public function index(): TemplateResponse {
 		$baseUrl = $this->excalidrawAPIService->getBaseUrl($this->userId);
-		$talkEnabled = $this->appManager->isEnabledForUser('spreed', $this->userId);
+		$talkEnabled = $this->appManager->isEnabledForUser('spreed');
 		$pageInitialState = [
 			'base_url' => $baseUrl,
 			'talk_enabled' => $talkEnabled,
