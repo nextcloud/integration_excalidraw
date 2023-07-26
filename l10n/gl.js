@@ -29,7 +29,7 @@ OC.L10N.register(
     "Public link copied!" : "Copiouse a ligazón pública!",
     "Link could not be copied to clipboard" : "Non foi posíbel copiar a ligazón ao portapapeis",
     "Delete" : "Eliminar",
-    "Choose color" : "Escolla a cor",
+    "Choose color" : "Escoller a cor",
     "Cancel" : "Cancelar",
     "Create" : "Crear",
     "Field \"{name}\" is missing" : "Falta o campo «{name}»",
