@@ -6,7 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## 1.0.4 - 2023-05-09
+## 2.0.3 - 2023-08-01
+
+Maintenance update
+
+### Fixed
+
+- Fix check if app enabled for user [#12](https://github.com/nextcloud/integration_excalidraw/pull/12)
+
+## 2.0.2 - 2023-05-09
 
 Maintenance update
 
