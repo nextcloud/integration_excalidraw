@@ -12,7 +12,7 @@ Maintenance update
 
 ### Fixed
 
-- Fixed excalidraw not working (server error)
+- Fix check if app enabled for user [#12](https://github.com/nextcloud/integration_excalidraw/pull/12)
 
 ## 2.0.2 - 2023-05-09
 
