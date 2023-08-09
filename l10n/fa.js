@@ -6,6 +6,7 @@ OC.L10N.register(
     "Copy to clipboard" : "کپی کردن به حافظه موقت",
     "Enabled" : "فعال شده",
     "Disabled" : "غیرفعال شده",
+    "Public link copied!" : "پیوند عمومی کپی شد!",
     "Delete" : "حذف",
     "Cancel" : "لغو",
     "Create" : "ساخت",
