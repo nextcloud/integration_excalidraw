@@ -14,6 +14,7 @@ OC.L10N.register(
     "Users" : "Užívatelia",
     "Groups" : "Skupiny",
     "Send" : "Odoslať",
-    "Room name" : "Názov miestnosti"
+    "Room name" : "Názov miestnosti",
+    "New room" : "Nová miestnosť"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");
