@@ -1,6 +1,7 @@
 { "translations": {
     "Public link copied!" : "¡Copióse l'enllaz públicu!",
     "Delete" : "Desaniciar",
+    "Cancel" : "Encaboxar",
     "Conversations" : "Conversaciones",
     "Groups" : "Grupos"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

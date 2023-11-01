@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Public link copied!" : "¡Copióse l'enllaz públicu!",
     "Delete" : "Desaniciar",
+    "Cancel" : "Encaboxar",
     "Conversations" : "Conversaciones",
     "Groups" : "Grupos"
 },
