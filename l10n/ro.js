@@ -8,6 +8,7 @@ OC.L10N.register(
     "Delete" : "Șterge",
     "Cancel" : "Anulare",
     "Create" : "Crează",
+    "Conversations" : "Conversații",
     "Users" : "Utilizatori",
     "Groups" : "Grupuri",
     "Send" : "Trimite"
