@@ -2,6 +2,7 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Tilknyttede kontoer",
+    "Instance address" : "Forekomstadresse",
     "Copy to clipboard" : "Kopiert til utklippstavlen",
     "Enabled" : "Aktivert",
     "Disabled" : "Deaktivert",
