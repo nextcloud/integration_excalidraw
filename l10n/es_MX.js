@@ -7,6 +7,7 @@ OC.L10N.register(
     "Delete" : "Eliminar",
     "Cancel" : "Cancelar",
     "Create" : "Crear",
+    "Search for users, groups or conversations" : "Buscar usuarios, grupos o conversaciones",
     "Conversations" : "Conversaciones",
     "Users" : " Usuarios",
     "Groups" : "Grupos",
