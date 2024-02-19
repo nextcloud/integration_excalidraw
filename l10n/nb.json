@@ -1,7 +1,22 @@
 { "translations": {
     "Connected accounts" : "Tilknyttede kontoer",
+    "Excalidraw integration" : "Integrasjon av Excalidraw",
+    "Excalidraw" : "Excalidraw",
+    "Collaborative whiteboard integration" : "Samarbeidende tavleintegrering",
+    "Modern collaborative whiteboard in Nextcloud.\nThis integration app lets users create Excalidraw boards, share board links and open boards directly in Nextcloud." : "Moderne samarbeidende tavleintegrering i Nextcloud.\nDenne integrasjonsappen lar brukere opprette Excalidraw-tavler, dele tavlelenker og åpne tavler direkte i Nextcloud.",
+    "You haven't created any room yet" : "Du har ikke opprettet noen rom enda",
+    "Create a room" : "Opprett et rom",
+    "No selected room" : "Ingen valgt rom",
+    "New room was created" : "Nytt rom ble opprettet",
+    "Failed to create new room" : "Oppretting av nytt rom feilet",
+    "Failed to delete the room" : "Sletting av rommet feilet",
     "{name} deleted" : "{name} slettet",
+    "Excalidraw whiteboard integration" : "Excalidraw tavle-integrasjon",
+    "Excalidraw instance address" : "Excalidraw-forekomstadresse",
     "Instance address" : "Forekomstadresse",
+    "Open Excalidraw links in Nextcloud" : "Åpne Excalidraw koblinger i Nextcloud",
+    "Excalidraw admin options saved" : "Administratorinnstillinger for Excalidraw lagret",
+    "Failed to save Excalidraw options" : "Lagring av administratoralternativer for Excalidraw feilet",
     "Open here" : "Åpne her",
     "Open in a new tab" : "Åpne i ny fane",
     "Share link to a Talk conversation" : "Del kobling til en Talk-samtale",
@@ -25,8 +40,10 @@
     "You created a conversation with {name}" : "Du opprettet en samtale med {name}",
     "Failed to join" : "Å bli med feilet",
     "You joined {name}" : "Du ble med {name}",
+    "Excalidraw room \"{name}\": {link}" : "Excalidraw-rom \"{name}\": {link}",
     "Link sent to {name}" : "Kobling sendt til {name}",
     "Failed to send link" : "Sending av kobling feilet",
-    "Room name" : "Romnavn"
+    "Room name" : "Romnavn",
+    "New room" : "Nytt rom"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
