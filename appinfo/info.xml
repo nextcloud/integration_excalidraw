@@ -16,7 +16,7 @@ This integration app lets users create Excalidraw boards, share board links and 
 	<screenshot>https://raw.githubusercontent.com/eneiluj/integration_excalidraw/master/img/screenshot2.jpg</screenshot>
 	<screenshot>https://raw.githubusercontent.com/eneiluj/integration_excalidraw/master/img/screenshot3.jpg</screenshot>
 	<dependencies>
-		<nextcloud min-version="25" max-version="28"/>
+		<nextcloud min-version="25" max-version="29"/>
 	</dependencies>
 	<settings>
 		<admin>OCA\Excalidraw\Settings\Admin</admin>
