@@ -218,7 +218,7 @@ body {
 }
 
 .empty-content {
-	margin: 20px;
+	margin-top: 20vh;
 }
 
 .settings {
