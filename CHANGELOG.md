@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 2.1.0 - 2024-02-23
+
+Maintenance update.
+
+### Added
+
+- Added Nextcloud 29 support
+
+### Changed
+
+- Updated l10n (localization)
+- Updated packages (security, Nextcloud Vue 8)
+
 ## 2.0.4 - 2023-10-25
 
 Maintenance update to add support of Nextcloud 28
