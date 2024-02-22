@@ -24,7 +24,7 @@
 					<ul>
 						<NcListItem v-for="c in conversationsToShow"
 							:key="'conv-' + c.id"
-							:title="c.displayName"
+							:name="c.displayName"
 							:active="selectedRoom && selectedRoom.id === c.id"
 							:bold="selectedRoom && selectedRoom.id === c.id"
 							@click="selectedRoom = c">
@@ -50,7 +50,7 @@
 					<ul>
 						<NcListItem v-for="c in usersToShow"
 							:key="'user-' + c.id"
-							:title="c.displayName"
+							:name="c.displayName"
 							:active="selectedRoom && selectedRoom.id === c.id"
 							:bold="selectedRoom && selectedRoom.id === c.id"
 							@click="selectedRoom = c">
@@ -326,10 +326,8 @@ export default {
 				this.selectedRoom.token = response.data.ocs.data.token
 				this.sendLink()
 			}).catch((error) => {
-				showError(
-					t('integration_excalidraw', 'Failed to join')
-					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? '')
-				)
+				showError(t('integration_excalidraw', 'Failed to join')
+					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? ''))
 				console.debug(error)
 				this.sending = false
 			})
@@ -347,10 +345,8 @@ export default {
 				showSuccess(t('integration_excalidraw', 'You joined {name}', { name: this.selectedRoom.displayName }))
 				this.sendLink()
 			}).catch((error) => {
-				showError(
-					t('integration_excalidraw', 'Failed to join')
-					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? '')
-				)
+				showError(t('integration_excalidraw', 'Failed to join')
+					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? ''))
 				console.debug(error)
 				this.sending = false
 			})
@@ -370,10 +366,8 @@ export default {
 				showSuccess(t('integration_excalidraw', 'Link sent to {name}', { name: this.selectedRoom.displayName }))
 				this.$emit('close')
 			}).catch((error) => {
-				showError(
-					t('integration_excalidraw', 'Failed to send link')
-					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? '')
-				)
+				showError(t('integration_excalidraw', 'Failed to send link')
+					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? ''))
 				console.debug(error)
 			}).then(() => {
 				this.sending = false

@@ -1,6 +1,6 @@
 <template>
 	<NcAppNavigationItem
-		:title="board.name"
+		:name="board.name"
 		:class="{ selectedBoard: selected }"
 		:force-menu="true"
 		@click="onBoardClick">

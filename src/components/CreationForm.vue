@@ -12,11 +12,11 @@
 					<component :is="field.icon"
 						v-if="field.icon"
 						:size="20" />
-					<CheckboxRadioSwitch v-if="field.togglable"
+					<NcCheckboxRadioSwitch v-if="field.togglable"
 						:checked.sync="field.enabled"
 						@update:checked="newBoard[fieldId] = ''">
 						{{ field.label }}
-					</CheckboxRadioSwitch>
+					</NcCheckboxRadioSwitch>
 					<label v-else
 						:for="'board-' + fieldId">
 						{{ field.label }}
@@ -47,14 +47,14 @@
 						v-model="newBoard[fieldId]"
 						:placeholder="field.placeholder" />
 				</span>
-				<DatetimePicker v-else-if="field.type === 'ncDate'"
+				<NcDateTimePicker v-else-if="field.type === 'ncDate'"
 					:id="'board-' + fieldId"
 					v-model="newBoard[fieldId]"
 					type="date"
 					:placeholder="field.placeholder"
 					:clearable="true"
 					:confirm="false" />
-				<DatetimePicker v-else-if="field.type === 'ncDatetime'"
+				<NcDateTimePicker v-else-if="field.type === 'ncDatetime'"
 					:id="'board-' + fieldId"
 					v-model="newBoard[fieldId]"
 					type="datetime"
@@ -63,17 +63,18 @@
 					:clearable="true"
 					:confirm="true" />
 				<div v-else-if="field.type === 'ncColor'">
-					<ColorPicker
+					<NcColorPicker
 						:value="newBoard[fieldId]"
 						@input="updateColor($event, fieldId)">
 						<NcButton
 							v-tooltip.top="{ content: t('integration_excalidraw', 'Choose color') }"
 							:style="{ backgroundColor: newBoard[fieldId] }" />
-					</ColorPicker>
+					</NcColorPicker>
 				</div>
-				<Multiselect v-else-if="field.type === 'select'"
+				<NcSelect v-else-if="field.type === 'select'"
 					:value="newBoard[fieldId]"
 					:options="Object.values(field.options)"
+					:multiple="true"
 					label="label"
 					:placeholder="field.placeholder"
 					@input="setSelectValue(fieldId, $event)"
@@ -83,7 +84,7 @@
 							v-if="option.icon"
 							class="option-icon"
 							:size="20" />
-						<Highlight :text="option.label" :search="query" class="option-title multiselect-option-title" />
+						<NcHighlight :text="option.label" :search="query" class="option-title multiselect-option-title" />
 					</template>
 					<template #singleLabel="{option}">
 						<component :is="option.icon"
@@ -94,7 +95,7 @@
 							{{ option.label }}
 						</span>
 					</template>
-				</Multiselect>
+				</NcSelect>
 				<RadioElementSet v-else-if="field.type === 'customRadioSet'"
 					:name="fieldId + '_radio'"
 					:options="field.options"
@@ -108,7 +109,7 @@
 					</template-->
 				</RadioElementSet>
 				<div v-else-if="field.type === 'ncRadioSet'">
-					<CheckboxRadioSwitch v-for="(option, id) in field.options"
+					<NcCheckboxRadioSwitch v-for="(option, id) in field.options"
 						:key="id"
 						:checked.sync="newBoard[fieldId]"
 						:value="id"
@@ -122,10 +123,10 @@
 						<span class="option-title">
 							{{ option.label }}
 						</span>
-					</CheckboxRadioSwitch>
+					</NcCheckboxRadioSwitch>
 				</div>
 				<div v-else-if="field.type === 'ncCheckboxSet'">
-					<CheckboxRadioSwitch v-for="(option, id) in field.options"
+					<NcCheckboxRadioSwitch v-for="(option, id) in field.options"
 						:key="id"
 						:checked.sync="newBoard[fieldId]"
 						:value="id"
@@ -138,10 +139,10 @@
 						<span class="option-title">
 							{{ option.label }}
 						</span>
-					</CheckboxRadioSwitch>
+					</NcCheckboxRadioSwitch>
 				</div>
 				<div v-else-if="field.type === 'ncSwitch'">
-					<CheckboxRadioSwitch
+					<NcCheckboxRadioSwitch
 						:checked.sync="newBoard[fieldId]"
 						type="switch"
 						class="ncradio">
@@ -150,10 +151,10 @@
 							class="option-icon"
 							:size="20" />
 						{{ field.label }}
-					</CheckboxRadioSwitch>
+					</NcCheckboxRadioSwitch>
 				</div>
 				<div v-else-if="field.type === 'ncCheckbox'">
-					<CheckboxRadioSwitch
+					<NcCheckboxRadioSwitch
 						:checked.sync="newBoard[fieldId]"
 						class="ncradio">
 						<component :is="field.icon"
@@ -161,7 +162,7 @@
 							class="option-icon"
 							:size="20" />
 						{{ field.label }}
-					</CheckboxRadioSwitch>
+					</NcCheckboxRadioSwitch>
 				</div>
 			</div>
 		</div>
@@ -187,9 +188,9 @@ import PaletteIcon from 'vue-material-design-icons/Palette.vue'
 import CheckIcon from 'vue-material-design-icons/Check.vue'
 
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
-import NcMultiselect from '@nextcloud/vue/dist/Components/NcMultiselect.js'
+import NcSelect from '@nextcloud/vue/dist/Components/NcSelect.js'
 import NcColorPicker from '@nextcloud/vue/dist/Components/NcColorPicker.js'
-import NcDatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker.js'
+import NcDateTimePicker from '@nextcloud/vue/dist/Components/NcDateTimePicker.js'
 import NcHighlight from '@nextcloud/vue/dist/Components/NcHighlight.js'
 import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
 
@@ -208,8 +209,8 @@ export default {
 		EyeOutlineIcon,
 		EyeOffOutlineIcon,
 		NcButton,
-		NcMultiselect,
-		NcDatetimePicker,
+		NcSelect,
+		NcDateTimePicker,
 		NcColorPicker,
 		NcHighlight,
 		NcCheckboxRadioSwitch,

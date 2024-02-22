@@ -20,7 +20,7 @@
 				:excalidraw-url="state.base_url"
 				:talk-enabled="state.talk_enabled" />
 			<NcEmptyContent v-else-if="activeBoardCount === 0"
-				:title="t('integration_excalidraw', 'You haven\'t created any room yet')">
+				:name="t('integration_excalidraw', 'You haven\'t created any room yet')">
 				<template #icon>
 					<ExcalidrawIcon />
 				</template>
@@ -36,7 +36,7 @@
 				</template>
 			</NcEmptyContent>
 			<NcEmptyContent v-else
-				:title="t('integration_excalidraw', 'No selected room')">
+				:name="t('integration_excalidraw', 'No selected room')">
 				<template #icon>
 					<ExcalidrawIcon />
 				</template>
@@ -159,10 +159,8 @@ export default {
 				this.selectedBoardId = board.id
 				this.creationModalOpen = false
 			}).catch((error) => {
-				showError(
-					t('integration_excalidraw', 'Failed to create new room')
-					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? '')
-				)
+				showError(t('integration_excalidraw', 'Failed to create new room')
+					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? ''))
 				console.debug(error)
 			}).then(() => {
 				this.creating = false
@@ -177,10 +175,8 @@ export default {
 			const url = generateUrl('/apps/integration_excalidraw/board/{boardId}', { boardId })
 			axios.delete(url).then((response) => {
 			}).catch((error) => {
-				showError(
-					t('integration_excalidraw', 'Failed to delete the room')
-					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? '')
-				)
+				showError(t('integration_excalidraw', 'Failed to delete the room')
+					+ ': ' + (error.response?.data?.error ?? error.response?.request?.responseText ?? ''))
 				console.debug(error)
 			})
 		},
@@ -207,7 +203,7 @@ export default {
 					deletionTimer.pause()
 					board.trash = false
 				},
-				{ timeout: 10000 }
+				{ timeout: 10000 },
 			)
 		},
 	},
@@ -219,6 +215,10 @@ export default {
 body {
 	min-height: 100%;
 	height: auto;
+}
+
+.empty-content {
+	margin: 20px;
 }
 
 .settings {

@@ -25,16 +25,13 @@
 </template>
 
 <script>
-import EarthIcon from 'vue-material-design-icons/Earth.vue'
-
-import ExcalidrawIcon from './icons/ExcalidrawIcon.vue'
-
+import axios from '@nextcloud/axios'
 import { loadState } from '@nextcloud/initial-state'
 import { generateUrl } from '@nextcloud/router'
-import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
-
+import EarthIcon from 'vue-material-design-icons/Earth.vue'
+import ExcalidrawIcon from './icons/ExcalidrawIcon.vue'
 import { delay } from '../utils.js'
 
 export default {
@@ -80,10 +77,8 @@ export default {
 			axios.put(url, req).then((response) => {
 				showSuccess(t('integration_excalidraw', 'Excalidraw admin options saved'))
 			}).catch((error) => {
-				showError(
-					t('integration_excalidraw', 'Failed to save Excalidraw options')
-					+ ': ' + error.response?.request?.responseText
-				)
+				showError(t('integration_excalidraw', 'Failed to save Excalidraw options')
+					+ ': ' + error.response?.request?.responseText)
 				console.error(error)
 			}).then(() => {
 			})
