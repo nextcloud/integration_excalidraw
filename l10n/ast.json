@@ -1,7 +1,9 @@
 { "translations": {
+    "Copy to clipboard" : "Copiar nel cartafueyu",
     "Public link copied!" : "¡Copióse l'enllaz públicu!",
     "Delete" : "Desaniciar",
     "Cancel" : "Encaboxar",
+    "Create" : "Crear",
     "Conversations" : "Conversaciones",
     "Groups" : "Grupos"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
