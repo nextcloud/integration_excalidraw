@@ -7,6 +7,7 @@ OC.L10N.register(
     "Cancel" : "Encaboxar",
     "Create" : "Crear",
     "Conversations" : "Conversaciones",
+    "Users" : "Usuarios",
     "Groups" : "Grupos"
 },
 "nplurals=2; plural=(n != 1);");
