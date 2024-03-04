@@ -6,6 +6,7 @@
     "Create" : "Crear",
     "Conversations" : "Conversaciones",
     "Users" : "Usuarios",
-    "Groups" : "Grupos"
+    "Groups" : "Grupos",
+    "Room name" : "Nome de la sala"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
