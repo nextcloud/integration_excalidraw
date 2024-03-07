@@ -1,4 +1,6 @@
 { "translations": {
+    "Failed to create new room" : "Nun se pue crear la sala",
+    "Failed to delete the room" : "Nun se pue desaniciar la sala",
     "Copy to clipboard" : "Copiar nel cartafueyu",
     "Public link copied!" : "¡Copióse l'enllaz públicu!",
     "Delete" : "Desaniciar",
@@ -7,6 +9,7 @@
     "Conversations" : "Conversaciones",
     "Users" : "Usuarios",
     "Groups" : "Grupos",
+    "Failed to send link" : "Nun se pue unviar l'enllaz",
     "Room name" : "Nome de la sala"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
