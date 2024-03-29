@@ -11,6 +11,7 @@ OC.L10N.register(
     "Conversations" : "Conversaciones",
     "Users" : "Usuarios",
     "Groups" : "Grupos",
+    "Send" : "Unviar",
     "Failed to send link" : "Nun se pue unviar l'enllaz",
     "Room name" : "Nome de la sala"
 },
