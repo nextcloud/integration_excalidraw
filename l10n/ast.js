@@ -4,6 +4,8 @@ OC.L10N.register(
     "Failed to create new room" : "Nun se pue crear la sala",
     "Failed to delete the room" : "Nun se pue desaniciar la sala",
     "Copy to clipboard" : "Copiar nel cartafueyu",
+    "Enabled" : "Activóse",
+    "Disabled" : "Desactivóse",
     "Public link copied!" : "¡Copióse l'enllaz públicu!",
     "Delete" : "Desaniciar",
     "Cancel" : "Encaboxar",
