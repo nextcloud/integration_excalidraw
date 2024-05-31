@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Copy to clipboard" : "Cóipeáil chuig an ngearrthaisce",
     "Disabled" : "Faoi mhíchumas",
     "Delete" : "Scrios",
     "Cancel" : "Cealaigh",
