@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Copy to clipboard" : "Cóipeáil chuig an ngearrthaisce",
     "Disabled" : "Faoi mhíchumas",
+    "Public link copied!" : "Nasc poiblí cóipeáilte!",
     "Delete" : "Scrios",
     "Cancel" : "Cealaigh",
     "Create" : "Cruthaigh",
