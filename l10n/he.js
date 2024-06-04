@@ -5,6 +5,7 @@ OC.L10N.register(
     "Copy to clipboard" : "העתקה ללוח הגזירים",
     "Enabled" : "מופעל",
     "Disabled" : "מושבת",
+    "Public link copied!" : "קישור ציבורי הועתק!",
     "Delete" : "מחיקה",
     "Cancel" : "ביטול",
     "Create" : "יצירה",
