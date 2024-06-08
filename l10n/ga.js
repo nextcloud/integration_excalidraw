@@ -2,6 +2,7 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Copy to clipboard" : "Cóipeáil chuig an ngearrthaisce",
+    "Enabled" : "Cumasaithe",
     "Disabled" : "Faoi mhíchumas",
     "Public link copied!" : "Nasc poiblí cóipeáilte!",
     "Delete" : "Scrios",
