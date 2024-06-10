@@ -8,6 +8,7 @@ OC.L10N.register(
     "Delete" : "Scrios",
     "Cancel" : "Cealaigh",
     "Create" : "Cruthaigh",
+    "Conversations" : "Comhráite",
     "Users" : "Úsáideoirí",
     "Groups" : "Grúpaí",
     "Send" : "Seol"
