@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Connected accounts" : "Đã kết nối tài khoản",
     "Copy to clipboard" : "Sao chép vào clipboard",
     "Enabled" : "Đá kích hoạt",
     "Disabled" : "Đã vô hiệu",
