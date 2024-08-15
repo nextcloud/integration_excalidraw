@@ -16,6 +16,7 @@ OC.L10N.register(
     "Users" : "Brugere",
     "Groups" : "Grupper",
     "Send" : "Send",
-    "Link sent to {name}" : "Link sendt til {name}"
+    "Link sent to {name}" : "Link sendt til {name}",
+    "Room name" : "Rumnavn"
 },
 "nplurals=2; plural=(n != 1);");
