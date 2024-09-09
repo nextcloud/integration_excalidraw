@@ -21,7 +21,7 @@ OC.L10N.register(
     "Failed to save Excalidraw options" : "Fallou o gardado das opcións de Excalidraw",
     "Open here" : "Abrir aquí",
     "Open in a new tab" : "Abrir nunha nova lapela",
-    "Share link to a Talk conversation" : "Compartir a ligazón a unha conversa en Talk",
+    "Share link to a Talk conversation" : "Ligazón para compartir unha conversa en Talk",
     "Public board link" : "Ligazón pública ao taboleiro",
     "Copy to clipboard" : "Copiar no portapapeis.",
     "Enabled" : "Activado",
