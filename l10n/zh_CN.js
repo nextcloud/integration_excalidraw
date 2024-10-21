@@ -16,6 +16,7 @@ OC.L10N.register(
     "Users" : "用户",
     "Groups" : "用户组",
     "Send" : "发送",
-    "Room name" : "房间名"
+    "Room name" : "房间名",
+    "New room" : "新聊天室"
 },
 "nplurals=1; plural=0;");
