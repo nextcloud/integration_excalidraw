@@ -16,6 +16,7 @@ OC.L10N.register(
     "Users" : "Användare",
     "Groups" : "Grupper",
     "Send" : "Skicka",
+    "You created a conversation with {name}" : "Du skapade en konversation med {name}",
     "Room name" : "Rumsnamn"
 },
 "nplurals=2; plural=(n != 1);");
