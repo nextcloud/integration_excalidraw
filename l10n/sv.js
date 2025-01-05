@@ -7,6 +7,7 @@ OC.L10N.register(
     "Enabled" : "Aktiverad",
     "Disabled" : "Inaktiverad",
     "Public link copied!" : "Offentlig länk kopierad!",
+    "Link could not be copied to clipboard" : "Länken kunde inte kopieras till urklipp",
     "Delete" : "Radera",
     "Cancel" : "Avbryt",
     "Create" : "Skapa",
