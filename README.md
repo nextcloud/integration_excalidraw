@@ -4,6 +4,8 @@
 
 This integration app lets users create Excalidraw boards, share board links and open boards directly in Nextcloud.
 
+> Note: Shared boards within iframe doesn't share state with the direct open board. This is a limitation on the Excalidraw side (https://github.com/excalidraw/excalidraw/issues/4308#issuecomment-2322861355).
+
 ## 🔧 Configuration
 
 ### Admin settings

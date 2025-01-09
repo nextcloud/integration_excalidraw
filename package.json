@@ -37,27 +37,27 @@
 	},
 	"dependencies": {
 		"@nextcloud/auth": "^2.4.0",
-		"@nextcloud/axios": "^2.5.0",
+		"@nextcloud/axios": "^2.5.1",
 		"@nextcloud/dialogs": "^5.3.7",
 		"@nextcloud/event-bus": "^3.3.1",
 		"@nextcloud/initial-state": "^2.2.0",
 		"@nextcloud/l10n": "^3.1.0",
-		"@nextcloud/moment": "^1.3.1",
+		"@nextcloud/moment": "^1.3.2",
 		"@nextcloud/router": "^3.0.1",
-		"@nextcloud/vue": "^8.18.0",
+		"@nextcloud/vue": "^8.22.0",
 		"@nextcloud/vue-dashboard": "^2.0.1",
 		"vue": "^2.6.14",
 		"vue-click-outside": "^1.1.0",
 		"vue-clipboard2": "^0.3.3",
-		"vue-material-design-icons": "^5.3.0"
+		"vue-material-design-icons": "^5.3.1"
 	},
 	"devDependencies": {
 		"@nextcloud/babel-config": "^1.2.0",
 		"@nextcloud/browserslist-config": "^3.0.1",
 		"@nextcloud/eslint-config": "^8.4.1",
 		"@nextcloud/stylelint-config": "^3.0.1",
-		"@nextcloud/webpack-vue-config": "^6.0.1",
+		"@nextcloud/webpack-vue-config": "^6.2.0",
 		"eslint-webpack-plugin": "^4.2.0",
-		"stylelint-webpack-plugin": "^5.0.0"
+		"stylelint-webpack-plugin": "^5.0.1"
 	}
 }
