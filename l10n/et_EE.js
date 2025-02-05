@@ -10,6 +10,7 @@ OC.L10N.register(
     "Create" : "Loo",
     "Users" : "Kasutajad",
     "Groups" : "Grupid",
-    "Send" : "Saada"
+    "Send" : "Saada",
+    "You joined {name}" : "Liitusid {name}-ga"
 },
 "nplurals=2; plural=(n != 1);");
