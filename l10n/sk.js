@@ -7,6 +7,7 @@ OC.L10N.register(
     "Enabled" : "Zapnuté",
     "Disabled" : "Vypnuté",
     "Public link copied!" : "Verejný odkaz bol skopírovaný!",
+    "Link could not be copied to clipboard" : "Odkaz nie je možné skopírovať do schránky",
     "Delete" : "Vymazať",
     "Choose color" : "Vyberte farbu",
     "Cancel" : "Zrušiť",
