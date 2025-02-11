@@ -2,8 +2,8 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Copy to clipboard" : "Copiar para área de transferência",
-    "Enabled" : "Activo",
-    "Disabled" : "Desactivado",
+    "Enabled" : "Ativado",
+    "Disabled" : "Desativado",
     "Delete" : "Eliminar",
     "Cancel" : "Cancelar",
     "Create" : "Criar",
