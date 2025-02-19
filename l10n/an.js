@@ -4,7 +4,7 @@ OC.L10N.register(
     "Enabled" : "Activau",
     "Disabled" : "Desactivau",
     "Delete" : "Borrar",
-    "Cancel" : "Canzelar",
+    "Cancel" : "Cancelar",
     "Create" : "Crear",
     "Users" : "Usuarios",
     "Groups" : "Grupos"
