@@ -2,6 +2,9 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Forbundne konti",
+    "Collaborative whiteboard integration" : "Samarbejds whiteboard integration",
+    "Modern collaborative whiteboard in Nextcloud.\nThis integration app lets users create Excalidraw boards, share board links and open boards directly in Nextcloud." : "Moderne samarbejde på whiteboard i Nextcloud.\nDenne integrationsapp lader brugere oprette Excalidraw tavler, dele tavlelinks og åbne tavler direkte i Nextcloud.",
+    "Excalidraw whiteboard integration" : "Excalidraw whiteboard integration",
     "Open here" : "Åbn her",
     "Open in a new tab" : "Åbn i en ny fane",
     "Copy to clipboard" : "Kopier til udklipsholder",
