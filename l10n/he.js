@@ -2,10 +2,10 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "חשבונות מקושרים",
+    "Public link copied!" : "קישור ציבורי הועתק!",
     "Copy to clipboard" : "העתקה ללוח הגזירים",
     "Enabled" : "מופעל",
     "Disabled" : "מושבת",
-    "Public link copied!" : "קישור ציבורי הועתק!",
     "Delete" : "מחיקה",
     "Cancel" : "ביטול",
     "Create" : "יצירה",

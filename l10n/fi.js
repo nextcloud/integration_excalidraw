@@ -3,10 +3,10 @@ OC.L10N.register(
     {
     "Connected accounts" : "Yhdistetyt tilit",
     "Instance address" : "Instanssin osoite",
+    "Public link copied!" : "Julkinen linkki kopioitu!",
     "Copy to clipboard" : "Kopioi leikepöydälle",
     "Enabled" : "Käytössä",
     "Disabled" : "Pois käytöstä",
-    "Public link copied!" : "Julkinen linkki kopioitu!",
     "Delete" : "Poista",
     "Cancel" : "Peruuta",
     "Create" : "Luo",

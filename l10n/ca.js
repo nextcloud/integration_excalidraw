@@ -3,10 +3,10 @@ OC.L10N.register(
     {
     "Connected accounts" : "Comptes connectats",
     "Instance address" : "Adreça de la instància",
+    "Public link copied!" : "S'ha copiat l'enllaç públic!",
     "Copy to clipboard" : "Copia-ho al porta-retalls",
     "Enabled" : "Habilitat",
     "Disabled" : "Inhabilitat",
-    "Public link copied!" : "S'ha copiat l'enllaç públic!",
     "Delete" : "Suprimir",
     "Cancel" : "Cancel·la",
     "Create" : "Crea",

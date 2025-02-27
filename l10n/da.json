@@ -3,21 +3,21 @@
     "Collaborative whiteboard integration" : "Samarbejds whiteboard integration",
     "Modern collaborative whiteboard in Nextcloud.\nThis integration app lets users create Excalidraw boards, share board links and open boards directly in Nextcloud." : "Moderne samarbejde på whiteboard i Nextcloud.\nDenne integrationsapp lader brugere oprette Excalidraw tavler, dele tavlelinks og åbne tavler direkte i Nextcloud.",
     "Excalidraw whiteboard integration" : "Excalidraw whiteboard integration",
+    "Public link copied!" : "Offentlig link kopieret!",
     "Open here" : "Åbn her",
     "Open in a new tab" : "Åbn i en ny fane",
     "Copy to clipboard" : "Kopier til udklipsholder",
     "Enabled" : "Aktiveret",
     "Disabled" : "Deaktiveret",
-    "Public link copied!" : "Offentlig link kopieret!",
     "Delete" : "Slet",
     "Choose color" : "Vælg farve",
     "Cancel" : "Annuller",
     "Create" : "Opret",
+    "Link sent to {name}" : "Link sendt til {name}",
     "Conversations" : "Samtaler",
     "Users" : "Brugere",
     "Groups" : "Grupper",
     "Send" : "Send",
-    "Link sent to {name}" : "Link sendt til {name}",
     "Room name" : "Rumnavn"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

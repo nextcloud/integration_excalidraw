@@ -3,10 +3,10 @@ OC.L10N.register(
     {
     "Connected accounts" : "Verbonden accounts",
     "Instance address" : "Instantie adres",
+    "Public link copied!" : "Openbare link gekopieerd!",
     "Copy to clipboard" : "Kopiëren naar het klembord",
     "Enabled" : "Ingeschakeld",
     "Disabled" : "Uitgeschakeld",
-    "Public link copied!" : "Openbare link gekopieerd!",
     "Delete" : "Verwijder",
     "Cancel" : "Annuleren",
     "Create" : "Creëer",
