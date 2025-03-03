@@ -1,6 +1,7 @@
 { "translations": {
     "Connected accounts" : "Συνδεδεμένοι λογαριασμοί",
     "Instance address" : "Διεύθυνση instance  ",
+    "Link could not be copied to clipboard" : "Ο σύνδεσμος δεν μπόρεσε να αντιγραφεί στο πρόχειρο",
     "Copy to clipboard" : "Αντιγραφή στο πρόχειρο",
     "Enabled" : "Ενεργοποιημένο",
     "Disabled" : "Απενεργοποιημένο",
