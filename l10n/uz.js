@@ -5,6 +5,7 @@ OC.L10N.register(
     "Cancel" : "Cancel",
     "Users" : "Users",
     "Groups" : "Groups",
-    "Send" : "Send"
+    "Send" : "Send",
+    "Room name" : "Xona nomi"
 },
 "nplurals=1; plural=0;");
