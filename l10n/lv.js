@@ -1,7 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
-    "Connected accounts" : "Savienotie konti",
+    "Connected accounts" : "Sasaistītie konti",
     "Public link copied!" : "Publiskā saite nokopēta!",
     "Copy to clipboard" : "Kopēt starpliktuvē",
     "Enabled" : "Iespējots",
