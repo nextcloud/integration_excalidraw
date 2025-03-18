@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Delete",
     "Cancel" : "Cancel",
+    "Create" : "Yaratish",
     "Users" : "Users",
     "Groups" : "Groups",
     "Send" : "Send",
