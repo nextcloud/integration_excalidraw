@@ -9,6 +9,7 @@ OC.L10N.register(
     "Cancel" : "Loobu",
     "Create" : "Loo",
     "You joined {name}" : "Liitusid {name}-ga",
+    "Conversations" : "Vestlused",
     "Users" : "Kasutajad",
     "Groups" : "Grupid",
     "Send" : "Saada"
