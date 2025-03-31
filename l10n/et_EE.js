@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Connected accounts" : "Ühendatud kasutajakontod",
     "Public link copied!" : "Avalik link kopeeritud!",
     "Copy to clipboard" : "Kopeeri lõikepuhvrisse",
     "Enabled" : "Lubatud",
