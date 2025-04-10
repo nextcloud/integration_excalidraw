@@ -3,8 +3,8 @@ OC.L10N.register(
     {
     "Enabled" : "Aotreet",
     "Disabled" : "Disaotreañ",
-    "Delete" : "Lemel",
-    "Cancel" : "Arrest",
+    "Delete" : "Dilemel",
+    "Cancel" : "Nullañ",
     "Create" : "Krouiñ",
     "Conversations" : "Diviz",
     "Users" : "Implijer",
