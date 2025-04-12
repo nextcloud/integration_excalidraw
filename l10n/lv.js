@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Connected accounts" : "Sasaistītie konti",
     "Public link copied!" : "Publiskā saite nokopēta!",
+    "Open here" : "Atvērt šeit",
+    "Open in a new tab" : "Atvērt jaunā cilnē",
     "Copy to clipboard" : "Kopēt starpliktuvē",
     "Enabled" : "Iespējots",
     "Disabled" : "Atspējots",
