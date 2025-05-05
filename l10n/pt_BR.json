@@ -35,7 +35,7 @@
     "Failed to join" : "Falha ao entrar",
     "You joined {name}" : "Você entrou {name}",
     "Excalidraw room \"{name}\": {link}" : "Sala Excalidraw \"{name}\": {link}",
-    "Link sent to {name}" : "Enviar link para {name}",
+    "Link sent to {name}" : "Link enviado para {name}",
     "Failed to send link" : "Falha ao enviar link",
     "Send link to a Talk room" : "Enviar link para sala de Conversa",
     "Search for users, groups or conversations" : "Procurar por usuários, grupos ou conversas",
