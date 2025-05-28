@@ -2,6 +2,7 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Sasaistītie konti",
+    "Failed to delete the room" : "Neizdevās izdzēst telpu",
     "Public link copied!" : "Publiskā saite nokopēta!",
     "Open here" : "Atvērt šeit",
     "Open in a new tab" : "Atvērt jaunā cilnē",
