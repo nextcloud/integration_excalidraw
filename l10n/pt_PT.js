@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Public link copied!" : "Public link copied!",
     "Copy to clipboard" : "Copiar para área de transferência",
     "Enabled" : "Ativado",
     "Disabled" : "Desativado",
