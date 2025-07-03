@@ -34,7 +34,7 @@ OC.L10N.register(
     "Cancel" : "İptal",
     "Create" : "Ekle",
     "You created a conversation with {name}" : "{name} ile bir görüşme başlattınız",
-    "Failed to join" : "Katılınamadı",
+    "Failed to join" : "Girilemedi",
     "You joined {name}" : "{name} görüşmesine katıldınız",
     "Excalidraw room \"{name}\": {link}" : "\"{name}\" Excalidraw odası: {link}",
     "Link sent to {name}" : "{name} için bağlantı gönderildi",
