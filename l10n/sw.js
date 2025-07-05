@@ -4,6 +4,7 @@ OC.L10N.register(
     "Connected accounts" : "Akaunti zilizounganishwa",
     "Public link copied!" : "Kiungio cha umma kimenakiliwa",
     "Copy to clipboard" : "Nakili kwenye ubao wa kunakili",
+    "Enabled" : "Washwa",
     "Disabled" : "Zima",
     "Delete" : "Futa",
     "Cancel" : "Cancel",
