@@ -12,6 +12,7 @@ OC.L10N.register(
     "Conversations" : "Разговори",
     "Users" : "Корисници",
     "Groups" : "Групи",
-    "Send" : "Испрати"
+    "Send" : "Испрати",
+    "Room name" : "Име на соба"
 },
 "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;");
