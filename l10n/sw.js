@@ -9,6 +9,7 @@ OC.L10N.register(
     "Delete" : "Futa",
     "Cancel" : "Cancel",
     "Create" : "Tengeneza",
+    "You joined {name}" : "You joined {name}",
     "Conversations" : "Mazungumzo",
     "Users" : "Watumiaji",
     "Groups" : "Makundi",
