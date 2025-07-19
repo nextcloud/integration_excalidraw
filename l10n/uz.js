@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Connected accounts" : "Ulangan akkauntlar",
     "Delete" : "Delete",
     "Cancel" : "Cancel",
     "Create" : "Yaratish",
