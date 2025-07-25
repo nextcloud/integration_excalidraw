@@ -2,8 +2,8 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Ulangan akkauntlar",
-    "Delete" : "Delete",
-    "Cancel" : "Cancel",
+    "Delete" : "O'chirish",
+    "Cancel" : "Bekor qilish",
     "Create" : "Yaratish",
     "Users" : "Users",
     "Groups" : "Groups",
