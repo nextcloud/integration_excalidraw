@@ -2,7 +2,9 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Підключені облікові записи",
+    "Instance address" : "Адреса установи",
     "Public link copied!" : "Публічне посилання скопійовано!",
+    "Link could not be copied to clipboard" : "Посилання не вдалося скопіювати в буфер обміну",
     "Copy to clipboard" : "Копіювати до буферу обміну",
     "Enabled" : "Увімкнено",
     "Disabled" : "Вимкнено",
