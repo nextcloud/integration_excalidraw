@@ -12,6 +12,7 @@ OC.L10N.register(
     "Delete" : "Izdzēst",
     "Cancel" : "Atcelt",
     "Create" : "Izveidot",
+    "You created a conversation with {name}" : "Tu izveidoji sarunu ar {name}",
     "Users" : "Lietotāji",
     "Groups" : "Grupas",
     "Send" : "Sūtīt",
