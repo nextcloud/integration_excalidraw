@@ -6,6 +6,7 @@ OC.L10N.register(
     "Cancel" : "Скасаваць",
     "Create" : "Стварыць",
     "You joined {name}" : "Вы далучыліся да {name}",
+    "Users" : "Карыстальнікі",
     "Groups" : "Групы",
     "Send" : "Адправіць"
 },
