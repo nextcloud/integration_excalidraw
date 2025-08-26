@@ -184,7 +184,6 @@
 <script>
 import EyeOutlineIcon from 'vue-material-design-icons/EyeOutline.vue'
 import EyeOffOutlineIcon from 'vue-material-design-icons/EyeOffOutline.vue'
-import PaletteIcon from 'vue-material-design-icons/Palette.vue'
 import CheckIcon from 'vue-material-design-icons/Check.vue'
 
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
@@ -205,7 +204,6 @@ export default {
 	components: {
 		RadioElementSet,
 		CheckIcon,
-		PaletteIcon,
 		EyeOutlineIcon,
 		EyeOffOutlineIcon,
 		NcButton,
