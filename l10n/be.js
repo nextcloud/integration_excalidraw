@@ -2,11 +2,17 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Public link copied!" : "Публічная спасылка скапіявана!",
+    "Open here" : "Адкрыць тут",
+    "Open in a new tab" : "Адкрыць у новай укладцы",
     "Copy to clipboard" : "Капіяваць у буфер абмену",
     "Delete" : "Выдаліць",
+    "Choose color" : "Выберыце колер",
     "Cancel" : "Скасаваць",
     "Create" : "Стварыць",
+    "Failed to join" : "Не ўдалося далучыцца",
     "You joined {name}" : "Вы далучыліся да {name}",
+    "Failed to send link" : "Не ўдалося адправіць спасылку",
+    "Conversations" : "Размовы",
     "Users" : "Карыстальнікі",
     "Groups" : "Групы",
     "Send" : "Адправіць"
