@@ -164,7 +164,6 @@
 </template>
 
 <script>
-import ShieldLinkVariantIcon from 'vue-material-design-icons/ShieldLinkVariant.vue'
 import LinkVariantIcon from 'vue-material-design-icons/LinkVariant.vue'
 import ToggleSwitchIcon from 'vue-material-design-icons/ToggleSwitch.vue'
 import ToggleSwitchOffOutlineIcon from 'vue-material-design-icons/ToggleSwitchOffOutline.vue'
@@ -196,7 +195,6 @@ export default {
 		SendModal,
 		TalkIcon,
 		LinkVariantIcon,
-		ShieldLinkVariantIcon,
 		ToggleSwitchIcon,
 		ToggleSwitchOffOutlineIcon,
 		CheckboxBlankOutlineIcon,

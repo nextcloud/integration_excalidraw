@@ -93,7 +93,7 @@
 					:disabled="selectedRoom === null"
 					@click="onSendLinkClick">
 					<template #icon>
-						<SendIcon :class="{ 'icon-loading': sending }" />
+						<SendOutlineIcon :class="{ 'icon-loading': sending }" />
 					</template>
 					{{ t('integration_excalidraw', 'Send') }}
 				</NcButton>
@@ -104,7 +104,7 @@
 
 <script>
 import CloseIcon from 'vue-material-design-icons/Close.vue'
-import SendIcon from 'vue-material-design-icons/Send.vue'
+import SendOutlineIcon from 'vue-material-design-icons/SendOutline.vue'
 
 import TalkIcon from './TalkIcon.vue'
 
@@ -131,7 +131,7 @@ export default {
 		NcButton,
 		NcAvatar,
 		NcModal,
-		SendIcon,
+		SendOutlineIcon,
 		CloseIcon,
 		NcListItem,
 		TalkIcon,
