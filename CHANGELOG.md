@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 2.4.1 - 2025-08-29
+
+### Changed
+- npm packages updated 
+- max NC version bumped to 32
+- icons changed to outlined versions
+
 ## 2.4.0 - 2025-01-09
 
 Maintenance update.
