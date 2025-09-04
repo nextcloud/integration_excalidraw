@@ -8,19 +8,11 @@ use OCP\Settings\IIconSection;
 
 class AdminSection implements IIconSection {
 
-	/** @var IL10N */
-	private $l;
-
-	/** @var IURLGenerator */
-	private $urlGenerator;
-
-	public function __construct(string $appName,
-		IURLGenerator $urlGenerator,
-		IL10N $l,
+	public function __construct(
+		private string $appName,
+		private IURLGenerator $urlGenerator,
+		private IL10N $l,
 	) {
-		$this->appName = $appName;
-		$this->l = $l;
-		$this->urlGenerator = $urlGenerator;
 	}
 
 	/**
@@ -52,9 +44,9 @@ class AdminSection implements IIconSection {
 	}
 
 	/**
-	 * @return ?string The relative path to a an icon describing the section
+	 * @return string The relative path to a an icon describing the section
 	 */
-	public function getIcon(): ?string {
+	public function getIcon(): string {
 		return $this->urlGenerator->imagePath('core', 'categories/integration.svg');
 	}
 

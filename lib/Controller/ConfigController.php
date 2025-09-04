@@ -23,18 +23,13 @@ use Psr\Log\LoggerInterface;
 
 class ConfigController extends Controller {
 
-	private $config;
-
-	public function __construct($AppName,
+	public function __construct(
+		private string $AppName,
 		IRequest $request,
-		IConfig $config,
-		LoggerInterface $logger,
-		?string $userId) {
+		private IConfig $config,
+		private LoggerInterface $logger,
+		private ?string $userId) {
 		parent::__construct($AppName, $request);
-		$this->appName = $AppName;
-		$this->userId = $userId;
-		$this->config = $config;
-		$this->logger = $logger;
 	}
 
 	/**

@@ -30,6 +30,9 @@ use OCP\EventDispatcher\IEventListener;
 use OCP\IConfig;
 use OCP\Util;
 
+/**
+ * @implements IEventListener<LoadViewer>
+ */
 class LoadViewerListener implements IEventListener {
 	/**
 	 * @var IConfig

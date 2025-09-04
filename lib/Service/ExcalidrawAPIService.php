@@ -15,6 +15,7 @@ namespace OCA\Excalidraw\Service;
 use OCA\Excalidraw\AppInfo\Application;
 use OCA\Excalidraw\Db\Board;
 use OCA\Excalidraw\Db\BoardMapper;
+use OCP\Http\Client\IClient;
 use OCP\Http\Client\IClientService;
 use OCP\IConfig;
 use OCP\Security\ISecureRandom;
@@ -25,41 +26,20 @@ class ExcalidrawAPIService {
 	public const BOARD_ID_LENGTH = 20;
 	public const BOARD_KEY_CHARACTERS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-';
 	public const BOARD_KEY_LENGTH = 22;
-	/**
-	 * @var LoggerInterface
-	 */
-	private $logger;
-	/**
-	 * @var IConfig
-	 */
-	private $config;
-	/**
-	 * @var string
-	 */
-	private $appName;
-	/**
-	 * @var BoardMapper
-	 */
-	private $boardMapper;
-	/**
-	 * @var ISecureRandom
-	 */
-	private $random;
+
+	private IClient $client;
 
 	/**
 	 * Service to make requests to Excalidraw API
 	 */
-	public function __construct(string $appName,
-		LoggerInterface $logger,
-		IConfig $config,
-		BoardMapper $boardMapper,
-		ISecureRandom $random,
+	public function __construct(
+		private string $appName,
+		private LoggerInterface $logger,
+		private IConfig $config,
+		private BoardMapper $boardMapper,
+		private ISecureRandom $random,
 		IClientService $clientService) {
 		$this->client = $clientService->newClient();
-		$this->logger = $logger;
-		$this->config = $config;
-		$this->boardMapper = $boardMapper;
-		$this->random = $random;
 	}
 
 	/**

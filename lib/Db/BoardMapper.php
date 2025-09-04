@@ -26,12 +26,16 @@ declare(strict_types=1);
 namespace OCA\Excalidraw\Db;
 
 use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\AppFramework\Db\Entity;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\AppFramework\Db\QBMapper;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 
 use OCP\IDBConnection;
 
+/**
+ * @extends QBMapper<Board>
+ */
 class BoardMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {
 		parent::__construct($db, 'excalidraw_boards', Board::class);
@@ -41,7 +45,8 @@ class BoardMapper extends QBMapper {
 	 * Find board by board_id (remote ID)
 	 *
 	 * @param string $boardId
-	 * @return Board
+	 * @return Entity
+	 * @psalm-return Board
 	 * @throws DoesNotExistException
 	 * @throws MultipleObjectsReturnedException
 	 * @throws \OCP\DB\Exception
