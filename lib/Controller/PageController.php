@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Nextcloud - Excalidraw integration
  *
@@ -11,16 +12,16 @@
 
 namespace OCA\Excalidraw\Controller;
 
+use OCA\Excalidraw\AppInfo\Application;
 use OCA\Excalidraw\Service\ExcalidrawAPIService;
 use OCP\App\IAppManager;
-use OCP\AppFramework\Services\IInitialState;
-use OCP\IConfig;
-use Psr\Log\LoggerInterface;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\AppFramework\Services\IInitialState;
+use OCP\IConfig;
 use OCP\IRequest;
 
-use OCA\Excalidraw\AppInfo\Application;
+use Psr\Log\LoggerInterface;
 
 class PageController extends Controller {
 
@@ -50,13 +51,13 @@ class PageController extends Controller {
 	private $excalidrawAPIService;
 
 	public function __construct(string $appName,
-								IRequest $request,
-								IConfig $config,
-								IAppManager $appManager,
-								IInitialState $initialStateService,
-								LoggerInterface $logger,
-								ExcalidrawAPIService $excalidrawAPIService,
-								?string $userId) {
+		IRequest $request,
+		IConfig $config,
+		IAppManager $appManager,
+		IInitialState $initialStateService,
+		LoggerInterface $logger,
+		ExcalidrawAPIService $excalidrawAPIService,
+		?string $userId) {
 		parent::__construct($appName, $request);
 		$this->userId = $userId;
 		$this->logger = $logger;

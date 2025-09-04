@@ -25,13 +25,12 @@ declare(strict_types=1);
 
 namespace OCA\Excalidraw\Db;
 
-use DateTime;
+use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\AppFramework\Db\QBMapper;
 use OCP\DB\QueryBuilder\IQueryBuilder;
-use OCP\IDBConnection;
 
-use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\IDBConnection;
 
 class BoardMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {

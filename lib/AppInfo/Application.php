@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Nextcloud - Excalidraw
  *
@@ -11,13 +12,12 @@ namespace OCA\Excalidraw\AppInfo;
 
 use OCA\Excalidraw\Listener\AddContentSecurityPolicyListener;
 use OCA\Excalidraw\Listener\LoadFileScriptListener;
-use OCA\Viewer\Event\LoadViewer;
+use OCA\Files\Event\LoadAdditionalScriptsEvent;
 use OCP\AppFramework\App;
-use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 
-use OCA\Files\Event\LoadAdditionalScriptsEvent;
+use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\AppFramework\Services\IInitialState;
 use OCP\IConfig;
 use OCP\Security\CSP\AddContentSecurityPolicyEvent;
@@ -43,7 +43,7 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function register(IRegistrationContext $context): void {
-//		$context->registerEventListener(LoadAdditionalScriptsEvent::class, LoadFileScriptListener::class);
+		//		$context->registerEventListener(LoadAdditionalScriptsEvent::class, LoadFileScriptListener::class);
 		$context->registerEventListener(AddContentSecurityPolicyEvent::class, AddContentSecurityPolicyListener::class);
 	}
 
@@ -51,7 +51,7 @@ class Application extends App implements IBootstrap {
 		$context->injectFn(function (
 			IInitialState $initialState,
 			IConfig $config,
-			?string $userId
+			?string $userId,
 		) {
 			/*
 			if (!$userId) {
@@ -69,4 +69,3 @@ class Application extends App implements IBootstrap {
 		});
 	}
 }
-

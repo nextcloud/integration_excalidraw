@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Nextcloud - Excalidraw
  *
@@ -11,24 +12,24 @@
 
 namespace OCA\Excalidraw\Controller;
 
-use OCP\IConfig;
-use Psr\Log\LoggerInterface;
-
-use OCP\IRequest;
-use OCP\AppFramework\Http\DataResponse;
+use OCA\Excalidraw\AppInfo\Application;
 use OCP\AppFramework\Controller;
 
-use OCA\Excalidraw\AppInfo\Application;
+use OCP\AppFramework\Http\DataResponse;
+use OCP\IConfig;
+use OCP\IRequest;
+
+use Psr\Log\LoggerInterface;
 
 class ConfigController extends Controller {
 
 	private $config;
 
 	public function __construct($AppName,
-								IRequest $request,
-								IConfig $config,
-								LoggerInterface $logger,
-								?string $userId) {
+		IRequest $request,
+		IConfig $config,
+		LoggerInterface $logger,
+		?string $userId) {
 		parent::__construct($AppName, $request);
 		$this->appName = $AppName;
 		$this->userId = $userId;

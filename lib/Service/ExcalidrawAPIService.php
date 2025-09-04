@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Nextcloud - Excalidraw
  *
@@ -14,10 +15,10 @@ namespace OCA\Excalidraw\Service;
 use OCA\Excalidraw\AppInfo\Application;
 use OCA\Excalidraw\Db\Board;
 use OCA\Excalidraw\Db\BoardMapper;
+use OCP\Http\Client\IClientService;
 use OCP\IConfig;
 use OCP\Security\ISecureRandom;
 use Psr\Log\LoggerInterface;
-use OCP\Http\Client\IClientService;
 
 class ExcalidrawAPIService {
 	public const BOARD_ID_CHARACTERS = '0123456789abcdefghijklmnopqrstuvwxyz';
@@ -48,12 +49,12 @@ class ExcalidrawAPIService {
 	/**
 	 * Service to make requests to Excalidraw API
 	 */
-	public function __construct (string $appName,
-								LoggerInterface $logger,
-								IConfig $config,
-								BoardMapper $boardMapper,
-								ISecureRandom $random,
-								IClientService $clientService) {
+	public function __construct(string $appName,
+		LoggerInterface $logger,
+		IConfig $config,
+		BoardMapper $boardMapper,
+		ISecureRandom $random,
+		IClientService $clientService) {
 		$this->client = $clientService->newClient();
 		$this->logger = $logger;
 		$this->config = $config;
@@ -119,7 +120,7 @@ class ExcalidrawAPIService {
 	 */
 	public function getBoards(string $userId): array {
 		$dbBoards = $this->boardMapper->getBoards($userId);
-		return array_map(static function(Board $dbBoard): array {
+		return array_map(static function (Board $dbBoard): array {
 			return [
 				'id' => $dbBoard->getBoardId(),
 				'key' => $dbBoard->getBoardKey(),
