@@ -1,25 +1,18 @@
 <?php
+
 namespace OCA\Excalidraw\Settings;
 
-use OCP\IURLGenerator;
 use OCP\IL10N;
+use OCP\IURLGenerator;
 use OCP\Settings\IIconSection;
 
 class AdminSection implements IIconSection {
 
-	/** @var IL10N */
-	private $l;
-
-	/** @var IURLGenerator */
-	private $urlGenerator;
-
-	public function __construct(string $appName,
-				    IURLGenerator $urlGenerator,
-				    IL10N $l
-				    ) {
-		$this->appName = $appName;
-		$this->l = $l;
-		$this->urlGenerator = $urlGenerator;
+	public function __construct(
+		private string $appName,
+		private IURLGenerator $urlGenerator,
+		private IL10N $l,
+	) {
 	}
 
 	/**
@@ -43,17 +36,17 @@ class AdminSection implements IIconSection {
 
 	/**
 	 * @return int whether the form should be rather on the top or bottom of
-	 * the settings navigation. The sections are arranged in ascending order of
-	 * the priority values. It is required to return a value between 0 and 99.
+	 *             the settings navigation. The sections are arranged in ascending order of
+	 *             the priority values. It is required to return a value between 0 and 99.
 	 */
 	public function getPriority(): int {
 		return 80;
 	}
 
 	/**
-	 * @return ?string The relative path to a an icon describing the section
+	 * @return string The relative path to a an icon describing the section
 	 */
-	public function getIcon(): ?string {
+	public function getIcon(): string {
 		return $this->urlGenerator->imagePath('core', 'categories/integration.svg');
 	}
 

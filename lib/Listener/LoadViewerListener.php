@@ -24,13 +24,15 @@
 namespace OCA\Excalidraw\Listener;
 
 use OCA\Excalidraw\AppInfo\Application;
-use OCA\Files\Event\LoadAdditionalScriptsEvent;
 use OCA\Viewer\Event\LoadViewer;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\IConfig;
 use OCP\Util;
 
+/**
+ * @implements IEventListener<LoadViewer>
+ */
 class LoadViewerListener implements IEventListener {
 	/**
 	 * @var IConfig

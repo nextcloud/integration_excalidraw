@@ -1,28 +1,22 @@
 <?php
+
 namespace OCA\Excalidraw\Settings;
 
+use OCA\Excalidraw\AppInfo\Application;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Services\IInitialState;
-use OCP\IRequest;
 use OCP\IConfig;
+use OCP\IRequest;
+
 use OCP\Settings\ISettings;
 
-use OCA\Excalidraw\AppInfo\Application;
-
 class Admin implements ISettings {
-
-	private $config;
-
-	public function __construct(string $appName,
-								IRequest $request,
-								IConfig $config,
-								IInitialState $initialStateService,
-								?string $userId) {
-		$this->appName = $appName;
-		$this->request = $request;
-		$this->config = $config;
-		$this->initialStateService = $initialStateService;
-		$this->userId = $userId;
+	public function __construct(
+		private string $appName,
+		private IRequest $request,
+		private IConfig $config,
+		private IInitialState $initialStateService,
+		private ?string $userId) {
 	}
 
 	/**

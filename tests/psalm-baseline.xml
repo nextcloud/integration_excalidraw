@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="6.13.1@1e3b7f0a8ab32b23197b91107adc0a7ed8a05b51">
+  <file src="lib/AppInfo/Application.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function boot(IBootContext $context): void {]]></code>
+      <code><![CDATA[public function register(IRegistrationContext $context): void {]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="lib/Db/Board.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[#[\ReturnTypeWillChange]]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="lib/Listener/AddContentSecurityPolicyListener.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function handle(Event $event): void {]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="lib/Listener/LoadFileScriptListener.php">
+    <ImplementedParamTypeMismatch>
+      <code><![CDATA[$event]]></code>
+    </ImplementedParamTypeMismatch>
+    <InvalidTemplateParam>
+      <code><![CDATA[IEventListener]]></code>
+    </InvalidTemplateParam>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function handle(Event $event): void {]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedClass>
+      <code><![CDATA[LoadAdditionalScriptsEvent]]></code>
+    </UndefinedClass>
+    <UndefinedDocblockClass>
+      <code><![CDATA[LoadFileScriptListener]]></code>
+    </UndefinedDocblockClass>
+  </file>
+  <file src="lib/Listener/LoadViewerListener.php">
+    <ImplementedParamTypeMismatch>
+      <code><![CDATA[$event]]></code>
+    </ImplementedParamTypeMismatch>
+    <InvalidTemplateParam>
+      <code><![CDATA[IEventListener]]></code>
+    </InvalidTemplateParam>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function handle(Event $event): void {]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedClass>
+      <code><![CDATA[LoadViewer]]></code>
+    </UndefinedClass>
+    <UndefinedDocblockClass>
+      <code><![CDATA[LoadViewerListener]]></code>
+    </UndefinedDocblockClass>
+  </file>
+  <file src="lib/Migration/Version000001Date20220720202233.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function changeSchema(IOutput $output, Closure $schemaClosure, array $options) {]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="lib/Settings/Admin.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getForm(): TemplateResponse {]]></code>
+      <code><![CDATA[public function getPriority(): int {]]></code>
+      <code><![CDATA[public function getSection(): string {]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="lib/Settings/AdminSection.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getID(): string {]]></code>
+      <code><![CDATA[public function getIcon(): string {]]></code>
+      <code><![CDATA[public function getName(): string {]]></code>
+      <code><![CDATA[public function getPriority(): int {]]></code>
+    </MissingOverrideAttribute>
+  </file>
+</files>

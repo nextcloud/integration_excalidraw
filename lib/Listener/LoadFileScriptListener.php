@@ -30,6 +30,9 @@ use OCP\EventDispatcher\IEventListener;
 use OCP\IConfig;
 use OCP\Util;
 
+/**
+ * @implements IEventListener<LoadAdditionalScriptsEvent>
+ */
 class LoadFileScriptListener implements IEventListener {
 	/**
 	 * @var IConfig
