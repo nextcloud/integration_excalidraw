@@ -23,7 +23,7 @@ OC.L10N.register(
     "Link could not be copied to clipboard" : "Non foi posíbel copiar a ligazón ao portapapeis",
     "Open here" : "Abrir aquí",
     "Open in a new tab" : "Abrir nunha nova lapela",
-    "Share link to a Talk conversation" : "Ligazón para compartir unha conversa en Parladoiro",
+    "Share link to a Talk conversation" : "Compartir ligazón a unha conversa en Parladoiro",
     "Public board link" : "Ligazón pública ao taboleiro",
     "Copy to clipboard" : "Copiar no portapapeis.",
     "Enabled" : "Activado",
