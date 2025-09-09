@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import DeleteIcon from 'vue-material-design-icons/Delete.vue'
+import DeleteIcon from 'vue-material-design-icons/DeleteOutline.vue'
 import ClipboardEditIcon from 'vue-material-design-icons/ClipboardEdit.vue'
 import ClipboardEditOutlineIcon from 'vue-material-design-icons/ClipboardEditOutline.vue'
 import ClickOutside from 'vue-click-outside'
