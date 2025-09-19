@@ -10,6 +10,7 @@ OC.L10N.register(
     "Delete" : "削除",
     "Cancel" : "キャンセル",
     "Create" : "作成",
+    "You created a conversation with {name}" : "{name}との会話を作成しました",
     "Conversations" : "会話",
     "Users" : "ユーザー",
     "Groups" : "グループ",
