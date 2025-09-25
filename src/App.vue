@@ -59,11 +59,11 @@ import PlusIcon from 'vue-material-design-icons/Plus.vue'
 
 import ExcalidrawIcon from './components/icons/ExcalidrawIcon.vue'
 
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
-import NcAppContent from '@nextcloud/vue/dist/Components/NcAppContent.js'
-import NcContent from '@nextcloud/vue/dist/Components/NcContent.js'
-import NcModal from '@nextcloud/vue/dist/Components/NcModal.js'
-import NcEmptyContent from '@nextcloud/vue/dist/Components/NcEmptyContent.js'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import NcAppContent from '@nextcloud/vue/components/NcAppContent'
+import NcContent from '@nextcloud/vue/components/NcContent'
+import NcModal from '@nextcloud/vue/components/NcModal'
+import NcEmptyContent from '@nextcloud/vue/components/NcEmptyContent'
 
 import { generateUrl } from '@nextcloud/router'
 import { loadState } from '@nextcloud/initial-state'

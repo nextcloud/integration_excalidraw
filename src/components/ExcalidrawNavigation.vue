@@ -22,8 +22,8 @@
 <script>
 import PlusIcon from 'vue-material-design-icons/Plus.vue'
 
-import NcAppNavigationNew from '@nextcloud/vue/dist/Components/NcAppNavigationNew.js'
-import NcAppNavigation from '@nextcloud/vue/dist/Components/NcAppNavigation.js'
+import NcAppNavigationNew from '@nextcloud/vue/components/NcAppNavigationNew'
+import NcAppNavigation from '@nextcloud/vue/components/NcAppNavigation'
 import BoardNavigationItem from './BoardNavigationItem.vue'
 
 export default {
@@ -50,6 +50,8 @@ export default {
 			required: true,
 		},
 	},
+
+	emits: ['create-board-clicked', 'board-clicked', 'delete-board'],
 
 	data() {
 		return {

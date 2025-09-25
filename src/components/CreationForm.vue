@@ -13,7 +13,7 @@
 						v-if="field.icon"
 						:size="20" />
 					<NcCheckboxRadioSwitch v-if="field.togglable"
-						:checked.sync="field.enabled"
+						v-model="field.enabled"
 						@update:checked="newBoard[fieldId] = ''">
 						{{ field.label }}
 					</NcCheckboxRadioSwitch>
@@ -67,7 +67,7 @@
 						:value="newBoard[fieldId]"
 						@input="updateColor($event, fieldId)">
 						<NcButton
-							v-tooltip.top="{ content: t('integration_excalidraw', 'Choose color') }"
+							:title="t('integration_excalidraw', 'Choose color')"
 							:style="{ backgroundColor: newBoard[fieldId] }" />
 					</NcColorPicker>
 				</div>
@@ -111,7 +111,7 @@
 				<div v-else-if="field.type === 'ncRadioSet'">
 					<NcCheckboxRadioSwitch v-for="(option, id) in field.options"
 						:key="id"
-						:checked.sync="newBoard[fieldId]"
+						v-model="newBoard[fieldId]"
 						:value="id"
 						:name="fieldId + '_radio'"
 						type="radio"
@@ -128,7 +128,7 @@
 				<div v-else-if="field.type === 'ncCheckboxSet'">
 					<NcCheckboxRadioSwitch v-for="(option, id) in field.options"
 						:key="id"
-						:checked.sync="newBoard[fieldId]"
+						v-model="newBoard[fieldId]"
 						:value="id"
 						:name="fieldId + '_checkbox'"
 						class="ncradio">
@@ -143,7 +143,7 @@
 				</div>
 				<div v-else-if="field.type === 'ncSwitch'">
 					<NcCheckboxRadioSwitch
-						:checked.sync="newBoard[fieldId]"
+						v-model="newBoard[fieldId]"
 						type="switch"
 						class="ncradio">
 						<component :is="field.icon"
@@ -155,7 +155,7 @@
 				</div>
 				<div v-else-if="field.type === 'ncCheckbox'">
 					<NcCheckboxRadioSwitch
-						:checked.sync="newBoard[fieldId]"
+						v-model="newBoard[fieldId]"
 						class="ncradio">
 						<component :is="field.icon"
 							v-if="field.icon"
@@ -171,7 +171,7 @@
 			<NcButton @click="$emit('cancel-clicked')">
 				{{ t('integration_excalidraw', 'Cancel') }}
 			</NcButton>
-			<NcButton type="primary" @click="onOkClick">
+			<NcButton variant="primary" @click="onOkClick">
 				<template #icon>
 					<CheckIcon :class="{ 'icon-loading': loading }" />
 				</template>
@@ -186,12 +186,12 @@ import EyeOutlineIcon from 'vue-material-design-icons/EyeOutline.vue'
 import EyeOffOutlineIcon from 'vue-material-design-icons/EyeOffOutline.vue'
 import CheckIcon from 'vue-material-design-icons/Check.vue'
 
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
-import NcSelect from '@nextcloud/vue/dist/Components/NcSelect.js'
-import NcColorPicker from '@nextcloud/vue/dist/Components/NcColorPicker.js'
-import NcDateTimePicker from '@nextcloud/vue/dist/Components/NcDateTimePicker.js'
-import NcHighlight from '@nextcloud/vue/dist/Components/NcHighlight.js'
-import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import NcSelect from '@nextcloud/vue/components/NcSelect'
+import NcColorPicker from '@nextcloud/vue/components/NcColorPicker'
+import NcDateTimePicker from '@nextcloud/vue/components/NcDateTimePicker'
+import NcHighlight from '@nextcloud/vue/components/NcHighlight'
+import NcCheckboxRadioSwitch from '@nextcloud/vue/components/NcCheckboxRadioSwitch'
 
 import { showError } from '@nextcloud/dialogs'
 
@@ -224,6 +224,8 @@ export default {
 			default: null,
 		},
 	},
+
+	emits: ['cancel-clicked', 'ok-clicked'],
 
 	data() {
 		return {

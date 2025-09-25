@@ -49,7 +49,7 @@
 					<div class="rightPart linkInputWrapper">
 						<input type="text" :readonly="true" :value="publicLink">
 						<a :href="publicLink" @click.prevent.stop="copyLink(false)">
-							<NcButton v-tooltip.bottom="{ content: t('integration_excalidraw', 'Copy to clipboard') }">
+							<NcButton :title="t('integration_excalidraw', 'Copy to clipboard')">
 								<template #icon>
 									<CheckIcon v-if="publicLinkCopied"
 										class="copiedIcon"
@@ -181,7 +181,7 @@ import moment from '@nextcloud/moment'
 import TalkIcon from './talk/TalkIcon.vue'
 import ClippyIcon from './icons/ClippyIcon.vue'
 
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import NcButton from '@nextcloud/vue/components/NcButton'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import SendModal from './talk/SendModal.vue'
 import ExcalidrawModal from './ExcalidrawModal.vue'
@@ -258,7 +258,7 @@ export default {
 		async copyLink() {
 			const link = this.publicLink
 			try {
-				await this.$copyText(link)
+				await navigator.clipboard.writeText(link)
 				this.publicLinkCopied = true
 				showSuccess(t('integration_excalidraw', 'Public link copied!'))
 				// eslint-disable-next-line
