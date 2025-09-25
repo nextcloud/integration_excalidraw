@@ -54,6 +54,8 @@ export default {
 		},
 	},
 
+	emits: ['update:checked'],
+
 	computed: {
 	},
 

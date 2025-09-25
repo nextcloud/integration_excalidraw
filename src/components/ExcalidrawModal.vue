@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import NcModal from '@nextcloud/vue/dist/Components/NcModal.js'
+import NcModal from '@nextcloud/vue/components/NcModal'
 
 export default {
 	name: 'ExcalidrawModal',
@@ -27,6 +27,8 @@ export default {
 			required: true,
 		},
 	},
+
+	emits: ['close'],
 
 	data() {
 		return {

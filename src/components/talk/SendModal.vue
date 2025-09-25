@@ -89,7 +89,7 @@
 				<NcButton @click="$emit('close')">
 					{{ t('integration_excalidraw', 'Cancel') }}
 				</NcButton>
-				<NcButton type="primary"
+				<NcButton variant="primary"
 					:disabled="selectedRoom === null"
 					@click="onSendLinkClick">
 					<template #icon>
@@ -108,10 +108,10 @@ import SendOutlineIcon from 'vue-material-design-icons/SendOutline.vue'
 
 import TalkIcon from './TalkIcon.vue'
 
-import NcModal from '@nextcloud/vue/dist/Components/NcModal.js'
-import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
-import NcListItem from '@nextcloud/vue/dist/Components/NcListItem.js'
+import NcModal from '@nextcloud/vue/components/NcModal'
+import NcAvatar from '@nextcloud/vue/components/NcAvatar'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import NcListItem from '@nextcloud/vue/components/NcListItem'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import { generateOcsUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
@@ -147,6 +147,8 @@ export default {
 			required: true,
 		},
 	},
+
+	emits: ['close'],
 
 	data() {
 		return {

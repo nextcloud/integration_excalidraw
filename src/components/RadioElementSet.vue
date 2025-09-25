@@ -45,6 +45,7 @@ export default {
 			default: undefined,
 		},
 	},
+	emits: ['update:value'],
 
 	computed: {
 	},

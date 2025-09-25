@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import './bootstrap.js'
+import { createApp } from 'vue'
 import { loadState } from '@nextcloud/initial-state'
 import ExcalidrawModalWrapper from './components/ExcalidrawModalWrapper.vue'
+import { translate, translatePlural } from '@nextcloud/l10n'
 
 function init() {
 	if (!OCA.Excalidraw) {
@@ -16,8 +16,23 @@ function init() {
 	wrapperElement.id = wrapperId
 	document.body.append(wrapperElement)
 
-	const View = Vue.extend(ExcalidrawModalWrapper)
-	OCA.Excalidraw.ExcalidrawModalWrapperVue = new View().$mount('#' + wrapperId)
+	const view = createApp(ExcalidrawModalWrapper)
+	view.mixin({
+		methods: {
+			t: translate,
+			n: translatePlural,
+		},
+		computed: {
+			OCA() {
+				return window.OCA
+			},
+			OC() {
+				return window.OC
+			},
+		},
+	})
+	OCA.Excalidraw.ExcalidrawModalWrapperVue = view
+	view.mount('#' + wrapperId)
 
 	OCA.Excalidraw.openModal = (roomUrl) => {
 		OCA.Excalidraw.ExcalidrawModalWrapperVue.openOn(roomUrl)

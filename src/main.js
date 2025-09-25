@@ -1,15 +1,24 @@
-import Vue from 'vue'
-import './bootstrap.js'
+import { createApp } from 'vue'
 import App from './App.vue'
 
 import '../css/main.scss'
-import Tooltip from '@nextcloud/vue/dist/Directives/Tooltip.js'
-import VueClipboard from 'vue-clipboard2'
-
-Vue.directive('tooltip', Tooltip)
-Vue.use(VueClipboard)
+import { translate, translatePlural } from '@nextcloud/l10n'
 
 document.addEventListener('DOMContentLoaded', (event) => {
-	const View = Vue.extend(App)
-	new View().$mount('#content')
+	const app = createApp(App)
+	app.mixin({
+		methods: {
+			t: translate,
+			n: translatePlural,
+		},
+		computed: {
+			OCA() {
+				return window.OCA
+			},
+			OC() {
+				return window.OC
+			},
+		},
+	})
+	app.mount('#content')
 })

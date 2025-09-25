@@ -11,15 +11,26 @@
  * @copyright Julien Veyssier 2022
  */
 
-import Vue from 'vue'
-import './bootstrap.js'
+import { createApp } from 'vue'
+import { translate, translatePlural } from '@nextcloud/l10n'
 import AdminSettings from './components/AdminSettings.vue'
 
 // eslint-disable-next-line
 'use strict'
 
-// eslint-disable-next-line
-new Vue({
-	el: '#excalidraw_prefs',
-	render: h => h(AdminSettings),
+const app = createApp(AdminSettings)
+app.mixin({
+	methods: {
+		t: translate,
+		n: translatePlural,
+	},
+	computed: {
+		OCA() {
+			return window.OCA
+		},
+		OC() {
+			return window.OC
+		},
+	},
 })
+app.mount('#excalidraw_prefs')
