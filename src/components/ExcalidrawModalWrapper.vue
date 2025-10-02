@@ -19,6 +19,8 @@ export default {
 	props: {
 	},
 
+	emits: ['close'],
+
 	data() {
 		return {
 			roomUrl: null,
