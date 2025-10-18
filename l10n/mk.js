@@ -9,6 +9,7 @@ OC.L10N.register(
     "Delete" : "Избриши",
     "Cancel" : "Откажи",
     "Create" : "Креирај",
+    "You joined {name}" : "Се приклучивте кон тимот {name}",
     "Conversations" : "Разговори",
     "Users" : "Корисници",
     "Groups" : "Групи",
