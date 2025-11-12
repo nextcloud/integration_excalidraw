@@ -5,18 +5,18 @@
 	<summary>Collaborative whiteboard integration</summary>
 	<description><![CDATA[Modern collaborative whiteboard in Nextcloud.
 This integration app lets users create Excalidraw boards, share board links and open boards directly in Nextcloud.]]></description>
-	<version>3.0.0-dev.0</version>
+	<version>3.0.0</version>
 	<licence>agpl</licence>
 	<author>Julien Veyssier</author>
 	<namespace>Excalidraw</namespace>
 	<category>integration</category>
-	<website>https://github.com/eneiluj/integration_excalidraw</website>
-	<bugs>https://github.com/eneiluj/integration_excalidraw/issues</bugs>
-	<screenshot>https://raw.githubusercontent.com/eneiluj/integration_excalidraw/master/img/screenshot1.jpg</screenshot>
-	<screenshot>https://raw.githubusercontent.com/eneiluj/integration_excalidraw/master/img/screenshot2.jpg</screenshot>
-	<screenshot>https://raw.githubusercontent.com/eneiluj/integration_excalidraw/master/img/screenshot3.jpg</screenshot>
+	<website>https://github.com/nextcloud/integration_excalidraw</website>
+	<bugs>https://github.com/nextcloud/integration_excalidraw/issues</bugs>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/integration_excalidraw/master/img/screenshot1.jpg</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/integration_excalidraw/master/img/screenshot2.jpg</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/integration_excalidraw/master/img/screenshot3.jpg</screenshot>
 	<dependencies>
-		<nextcloud min-version="31" max-version="32"/>
+		<nextcloud min-version="31" max-version="33"/>
 	</dependencies>
 	<settings>
 		<admin>OCA\Excalidraw\Settings\Admin</admin>

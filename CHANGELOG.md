@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.0] - 2025-11-12
+
+### New
+
+* enh: Migrate to vue3
+* Switch to outlined icons
+
+### Fixed
+
+* fix(l10n): Update translations from Transifex
+
 ## 2.4.1 - 2025-08-29
 
 ### Changed
