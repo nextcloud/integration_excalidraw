@@ -5,7 +5,7 @@ OC.L10N.register(
     "Excalidraw integration" : "Integración de Excalidraw",
     "Excalidraw" : "Excalidraw",
     "Collaborative whiteboard integration" : "Integración dun encerado colaborativo",
-    "Modern collaborative whiteboard in Nextcloud.\nThis integration app lets users create Excalidraw boards, share board links and open boards directly in Nextcloud." : "Encerado colaborativo moderno en Nextcloud.\nEsta app de integración permite ós usuarios crear taboleiros Excalidraw, compartir enlaces a taboleiros e abrir taboleiros directamente en Nextcloud.",
+    "Modern collaborative whiteboard in Nextcloud.\nThis integration app lets users create Excalidraw boards, share board links and open boards directly in Nextcloud." : "Encerado colaborativo moderno en Nextcloud.\nEsta app de integración permite ós usuarios crear taboleiros Excalidraw, compartir ligazóns a taboleiros e abrir taboleiros directamente en Nextcloud.",
     "New room was created" : "Creouse unha nova sala",
     "Failed to create new room" : "Produciuse un erro ao crear unha nova sala",
     "Failed to delete the room" : "Produciuse un fallo ao eliminar a sala",
