@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Copy to clipboard" : "ສຳເນົາໃສ່ຄລິບບອດ",
     "Delete" : "ລຶບ",
     "Cancel" : "ຍົກເລີກ",
     "Create" : "ສ້າງ",
