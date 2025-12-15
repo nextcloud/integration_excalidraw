@@ -9,6 +9,7 @@ OC.L10N.register(
     "Enabled" : "Käytössä",
     "Disabled" : "Pois käytöstä",
     "Delete" : "Poista",
+    "Choose color" : "Valitse väri",
     "Cancel" : "Peruuta",
     "Create" : "Luo",
     "Conversations" : "Keskustelut",
