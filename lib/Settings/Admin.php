@@ -16,7 +16,8 @@ class Admin implements ISettings {
 		private IRequest $request,
 		private IConfig $config,
 		private IInitialState $initialStateService,
-		private ?string $userId) {
+		private ?string $userId,
+	) {
 	}
 
 	/**
