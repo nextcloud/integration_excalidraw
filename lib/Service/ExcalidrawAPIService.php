@@ -38,7 +38,8 @@ class ExcalidrawAPIService {
 		private IConfig $config,
 		private BoardMapper $boardMapper,
 		private ISecureRandom $random,
-		IClientService $clientService) {
+		IClientService $clientService,
+	) {
 		$this->client = $clientService->newClient();
 	}
 

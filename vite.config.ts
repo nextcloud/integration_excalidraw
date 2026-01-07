@@ -11,6 +11,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 export default createAppConfig({
     main: 'src/main.js',
     adminSettings: 'src/adminSettings.js',
+    standlone: 'src/standalone.js',
 }, {
     config: {
         css: {
