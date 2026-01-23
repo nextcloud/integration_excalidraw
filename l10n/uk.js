@@ -25,7 +25,7 @@ OC.L10N.register(
     "Open in a new tab" : "Відкрити в новій вкладці",
     "Share link to a Talk conversation" : "Поділіться посиланням на розмову Talk",
     "Public board link" : "Посилання на публічну дошку",
-    "Copy to clipboard" : "Копіювати до буферу обміну",
+    "Copy to clipboard" : "Копіювати до буфера обміну",
     "Enabled" : "Увімкнено",
     "Disabled" : "Вимкнено",
     "Delete" : "Вилучити",
