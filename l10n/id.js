@@ -4,6 +4,7 @@ OC.L10N.register(
     "Connected accounts" : "Akun terhubung",
     "Instance address" : "Alamat server",
     "Public link copied!" : "Tautan publik disalin!",
+    "Link could not be copied to clipboard" : "Tautan tidak dapat disalin ke papan klip",
     "Copy to clipboard" : "Salin ke papan klip",
     "Enabled" : "Diaktifkan",
     "Disabled" : "Dinonaktifkan",
