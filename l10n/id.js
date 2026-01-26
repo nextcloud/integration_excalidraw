@@ -9,6 +9,7 @@ OC.L10N.register(
     "Enabled" : "Diaktifkan",
     "Disabled" : "Dinonaktifkan",
     "Delete" : "Hapus",
+    "Choose color" : "Pilih warna",
     "Cancel" : "Membatalkan",
     "Create" : "Buat",
     "You joined {name}" : "Anda bergabung dengan {name}",
