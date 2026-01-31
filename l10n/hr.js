@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Connected accounts" : "Povezani računi",
     "Instance address" : "Adresa instance",
+    "Public link copied!" : "Javna poveznica kopirana!",
     "Copy to clipboard" : "Kopiraj u međuspremnik",
     "Enabled" : "Omogućeno",
     "Disabled" : "Onemogućeno",
