@@ -20,7 +20,7 @@ OC.L10N.register(
     "Instance address" : "Адреса установи",
     "Open Excalidraw links in Nextcloud" : "Відкрийте посилання Excalidraw у Nextcloud",
     "Public link copied!" : "Публічне посилання скопійовано!",
-    "Link could not be copied to clipboard" : "Посилання не вдалося скопіювати в буфер обміну",
+    "Link could not be copied to clipboard" : "Посилання не вдалося скопіювати до буфера обміну",
     "Open here" : "Відкривай тут.",
     "Open in a new tab" : "Відкрити в новій вкладці",
     "Share link to a Talk conversation" : "Поділітися посиланням розмови у Talk",
