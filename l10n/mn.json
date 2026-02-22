@@ -1,11 +1,15 @@
 { "translations": {
+    "Public link copied!" : "Нийтийн холбоос хуулагдлаа!",
+    "Copy to clipboard" : "Санах ойд хуулах",
     "Enabled" : "Идэвхижүүлэх",
     "Disabled" : "идэвхигүй",
     "Delete" : "Устгах",
     "Cancel" : "болиулах",
     "Create" : "Үүсгэх",
+    "Conversations" : "Яриа",
     "Users" : "хэрэглэгч",
     "Groups" : "бүлэгүүд",
-    "Send" : "илгээх"
+    "Send" : "илгээх",
+    "Room name" : "Өрөөний нэр"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
