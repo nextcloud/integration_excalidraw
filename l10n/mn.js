@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Connected accounts" : "Холбогдсон бүртгэлүүд",
     "Public link copied!" : "Нийтийн холбоос хуулагдлаа!",
     "Copy to clipboard" : "Санах ойд хуулах",
     "Enabled" : "Идэвхижүүлэх",
