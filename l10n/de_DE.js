@@ -39,7 +39,7 @@ OC.L10N.register(
     "Excalidraw room \"{name}\": {link}" : "Excalidraw Raum \"{name}\": {link}",
     "Link sent to {name}" : "Link an {name} versandt",
     "Failed to send link" : "Link konnte nicht gesendet werden",
-    "Send link to a Talk room" : "Link an einen Unterhaltungsraum senden",
+    "Send link to a Talk room" : "Link an einen Talk-Raum senden",
     "Search for users, groups or conversations" : "Nach Benutzern, Gruppen oder Unterhaltungen suchen",
     "Conversations" : "Unterhaltungen",
     "Users" : "Benutzer",
