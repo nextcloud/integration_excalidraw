@@ -14,6 +14,7 @@ OC.L10N.register(
     "Enabled" : "Įjungta",
     "Disabled" : "Išjungta",
     "Delete" : "Ištrinti",
+    "Choose color" : "Pasirinkite spalvą",
     "Cancel" : "Atsisakyti",
     "Create" : "Sukurti",
     "Failed to send link" : "Nepavyko išsiųsti nuorodos",
