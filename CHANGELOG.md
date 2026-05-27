@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.1.1] - 2026-05-27
+
+### Fixed
+
+- Update dependencies
+- Update translations from transifex
+- Fix javascript build
+
 ## [3.1.0] - 2026-04-08
 
 ### New
