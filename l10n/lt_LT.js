@@ -19,7 +19,7 @@ OC.L10N.register(
     "Create" : "Sukurti",
     "Failed to send link" : "Nepavyko išsiųsti nuorodos",
     "Conversations" : "Pokalbiai",
-    "Users" : "Naudotojai",
+    "Users" : "Vartotojai",
     "Groups" : "Grupės",
     "Send" : "Siųsti",
     "Room name" : "Kambario pavadinimas",
