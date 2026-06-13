@@ -1,8 +1,11 @@
 { "translations": {
     "Connected accounts" : "Prijungtos paskyros",
+    "Collaborative whiteboard integration" : "Bendradarbiavimo skaitmeninės lentos integravimas",
+    "Modern collaborative whiteboard in Nextcloud.\nThis integration app lets users create Excalidraw boards, share board links and open boards directly in Nextcloud." : "Šiuolaikiška bendradarbiavimo skaitmeninė lenta „Nextcloud“.\nŠi integracijos programa leidžia vartotojams kurti „Excalidraw“ lentas, dalytis nuorodomis į lentas ir jas atidaryti tiesiogiai „Nextcloud“ aplinkoje.",
     "Failed to create new room" : "Nepavyko sukurti naujo kambario",
     "Failed to delete the room" : "Nepavyko ištrinti kambario",
     "{name} deleted" : "{name} ištrintas",
+    "Excalidraw whiteboard integration" : "„Excalidraw“ integracija su skaitmenine lenta",
     "Instance address" : "Egzemplioriaus adresas",
     "Public link copied!" : "Viešoji nuoroda nukopijuota!",
     "Link could not be copied to clipboard" : "Nepavyko nukopijuoti nuorodos į iškarpinę",
