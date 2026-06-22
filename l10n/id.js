@@ -13,6 +13,7 @@ OC.L10N.register(
     "Cancel" : "Membatalkan",
     "Create" : "Buat",
     "You joined {name}" : "Anda bergabung dengan {name}",
+    "Conversations" : "Percakapan",
     "Users" : "Pengguna",
     "Groups" : "Grup",
     "Send" : "Kirim",
