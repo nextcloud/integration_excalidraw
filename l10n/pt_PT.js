@@ -1,6 +1,9 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Connected accounts" : "Contas conectadas",
+    "Excalidraw integration" : "Integração Excalidraw",
+    "Failed to create new room" : "Falha ao criar nova sala",
     "Public link copied!" : "Public link copied!",
     "Copy to clipboard" : "Copiar para área de transferência",
     "Enabled" : "Ativado",
@@ -8,6 +11,7 @@ OC.L10N.register(
     "Delete" : "Eliminar",
     "Cancel" : "Cancelar",
     "Create" : "Criar",
+    "Failed to join" : "Falha ao entrar",
     "Conversations" : "Conversações",
     "Users" : "Utilizadores",
     "Groups" : "Grupos",
