@@ -3,8 +3,10 @@ OC.L10N.register(
     {
     "Connected accounts" : "Contas conectadas",
     "Excalidraw integration" : "Integração Excalidraw",
+    "New room was created" : "Nova sala foi criada",
     "Failed to create new room" : "Falha ao criar nova sala",
     "Public link copied!" : "Public link copied!",
+    "Link could not be copied to clipboard" : "Não foi possível copiar o link para a área de transferência",
     "Copy to clipboard" : "Copiar para área de transferência",
     "Enabled" : "Ativado",
     "Disabled" : "Desativado",
@@ -12,10 +14,13 @@ OC.L10N.register(
     "Cancel" : "Cancelar",
     "Create" : "Criar",
     "Failed to join" : "Falha ao entrar",
+    "Excalidraw room \"{name}\": {link}" : "Sala Excalidraw \"{name}\": {link}",
+    "Link sent to {name}" : "Link enviado para {name}",
     "Conversations" : "Conversações",
     "Users" : "Utilizadores",
     "Groups" : "Grupos",
     "Send" : "Enviar",
-    "Room name" : "Nome da sala"
+    "Room name" : "Nome da sala",
+    "New room" : "Nova sala"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
