@@ -12,6 +12,7 @@ OC.L10N.register(
     "{name} deleted" : "{name} excluído",
     "You haven't created any room yet" : "Você ainda não criou nenhuma sala",
     "Create a room" : "Criar uma sala",
+    "No selected room" : "Nenhuma sala selecionada",
     "Failed to save Excalidraw options" : "Falha ao salvar opções Excalidraw",
     "Excalidraw whiteboard integration" : "Integração de quadro branco Excalidraw",
     "Excalidraw instance address" : "Endereço da instância Excalidraw",
