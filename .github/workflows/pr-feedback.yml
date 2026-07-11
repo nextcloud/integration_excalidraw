@@ -17,7 +17,7 @@ jobs:
         id: scrape
         with:
           website: 'https://nextcloud.com/team/'
-      - uses: marcelklehr/pr-feedback-action@601109aa729eb4c8d6d0ece7567b9d4901db4aef
+      - uses: marcelklehr/pr-feedback-action@4709fa5b3e1821559d4c312ef937b61f1567aa44
         with:
           feedback-message: |
             Hello there,
