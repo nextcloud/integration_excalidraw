@@ -2,13 +2,13 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Anslutna konton",
-    "Public link copied!" : "Offentlig länk kopierad!",
-    "Link could not be copied to clipboard" : "Länken kunde inte kopieras till urklipp",
+    "Public link copied!" : "Den offentliga länken har kopierats!",
+    "Link could not be copied to clipboard" : "Det gick inte att kopiera länken till urklipp",
     "Share link to a Talk conversation" : "Dela länk till en Talk-konversation",
     "Copy to clipboard" : "Kopiera till urklipp",
     "Enabled" : "Aktiverad",
     "Disabled" : "Inaktiverad",
-    "Delete" : "Radera",
+    "Delete" : "Ta bort",
     "Cancel" : "Avbryt",
     "Create" : "Skapa",
     "You created a conversation with {name}" : "Du skapade en konversation med {name}",
@@ -18,6 +18,6 @@ OC.L10N.register(
     "Users" : "Användare",
     "Groups" : "Grupper",
     "Send" : "Skicka",
-    "Room name" : "Rumsnamn"
+    "Room name" : "Rummets namn"
 },
 "nplurals=2; plural=(n != 1);");
