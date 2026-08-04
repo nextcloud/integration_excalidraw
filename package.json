@@ -1,6 +1,6 @@
 {
 	"name": "integration_excalidraw",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "Excalidraw integration",
 	"main": "index.js",
 	"directories": {

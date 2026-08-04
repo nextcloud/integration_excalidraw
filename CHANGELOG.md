@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [4.0.1] - 2026-08-04
+
+### Fixed
+
+- Fixed build script
+
 ## [4.0.0] - 2026-08-04
 
 ### Breaking changes
