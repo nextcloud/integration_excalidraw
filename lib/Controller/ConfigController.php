@@ -14,11 +14,9 @@ namespace OCA\Excalidraw\Controller;
 
 use OCA\Excalidraw\AppInfo\Application;
 use OCP\AppFramework\Controller;
-
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IConfig;
 use OCP\IRequest;
-
 use Psr\Log\LoggerInterface;
 
 class ConfigController extends Controller {

@@ -21,6 +21,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
 namespace OCA\Excalidraw\Listener;
 
 use OCA\Excalidraw\AppInfo\Application;
