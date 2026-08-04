@@ -20,7 +20,6 @@ use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Services\IInitialState;
 use OCP\IConfig;
 use OCP\IRequest;
-
 use Psr\Log\LoggerInterface;
 
 class PageController extends Controller {
