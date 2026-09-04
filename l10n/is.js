@@ -7,6 +7,7 @@ OC.L10N.register(
     "Enabled" : "Virkt",
     "Disabled" : "Óvirkt",
     "Delete" : "Eyða",
+    "Choose color" : "Veldu lit",
     "Cancel" : "Hætta við",
     "Create" : "Búa til",
     "Conversations" : "Samtöl",
