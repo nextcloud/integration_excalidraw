@@ -23,7 +23,7 @@ OC.L10N.register(
     "Link could not be copied to clipboard" : "Ссылку не удалось скопировать в буфер обмена.",
     "Open here" : "Откройте здесь",
     "Open in a new tab" : "Открыть в новой вкладке",
-    "Share link to a Talk conversation" : "Поделиться ссылкой на беседу в Talk",
+    "Share link to a Talk conversation" : "Поделиться ссылкой на обсуждение в «Конференциях»",
     "Public board link" : "Ссылка на общественный форум",
     "Copy to clipboard" : "Копировать в буфер",
     "Enabled" : "Включено",
