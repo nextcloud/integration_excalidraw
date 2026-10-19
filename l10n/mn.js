@@ -13,6 +13,7 @@ OC.L10N.register(
     "Users" : "хэрэглэгч",
     "Groups" : "бүлэгүүд",
     "Send" : "илгээх",
-    "Room name" : "Өрөөний нэр"
+    "Room name" : "Өрөөний нэр",
+    "New room" : "Шинэ өрөө"
 },
 "nplurals=2; plural=(n != 1);");
