@@ -7,11 +7,14 @@ OC.L10N.register(
     "Enabled" : "Activat",
     "Disabled" : "Dezactivați",
     "Delete" : "Șterge",
+    "Choose color" : "Alege culoarea",
     "Cancel" : "Anulare",
     "Create" : "Crează",
+    "You joined {name}" : "Te-ai alăturat echipei {name}",
     "Conversations" : "Conversații",
     "Users" : "Utilizatori",
     "Groups" : "Grupuri",
-    "Send" : "Trimite"
+    "Send" : "Trimite",
+    "Room name" : "Numele sălii"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");
