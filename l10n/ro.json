@@ -13,6 +13,7 @@
     "Users" : "Utilizatori",
     "Groups" : "Grupuri",
     "Send" : "Trimite",
-    "Room name" : "Numele sălii"
+    "Room name" : "Numele sălii",
+    "New room" : "Cameră nouă"
 },"pluralForm" :"nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));"
 }
