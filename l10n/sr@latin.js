@@ -1,6 +1,7 @@
 OC.L10N.register(
     "integration_excalidraw",
     {
+    "Enabled" : "Uključeno",
     "Delete" : "Obriši",
     "Cancel" : "Otkaži",
     "Create" : "Napravi",
