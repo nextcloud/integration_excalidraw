@@ -2,6 +2,7 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Conturile conectate",
+    "Instance address" : "Adresa instanței",
     "Public link copied!" : "Linkul public a fost copiat!",
     "Copy to clipboard" : "Copiază în clipboard",
     "Enabled" : "Activat",
