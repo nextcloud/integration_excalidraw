@@ -2,6 +2,7 @@ OC.L10N.register(
     "integration_excalidraw",
     {
     "Connected accounts" : "Połączone konta",
+    "Excalidraw" : "Excalidraw",
     "Instance address" : "Adres instancji",
     "Public link copied!" : "Skopiowano link publiczny!",
     "Copy to clipboard" : "Kopiuj do schowka",
